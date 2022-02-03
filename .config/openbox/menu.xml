@@ -1,0 +1,1597 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_menu>
+    <menu id="root-menu" label="OpenBox 3">
+        <menu id="1" label="Development">
+            <menu id="0" label="KDevelop">
+                <item label="KDevelop"> <action name="Execute">
+                    <execute>kdevelop</execute>
+                </action> </item>
+                <item label="KDevelop (Pick Session)"> <action name="Execute">
+                    <execute>kdevelop --ps</execute>
+                </action> </item>
+            </menu>
+            <item label="Atom"> <action name="Execute">
+                <execute>env ATOM_DISABLE_SHELLING_OUT_FOR_ENVIRONMENT=false /usr/bin/atom</execute>
+            </action> </item>
+            <item label="GDB"> <action name="Execute">
+                <execute>alacritty -e gdb</execute>
+            </action> </item>
+            <item label="Icon Browser"> <action name="Execute">
+                <execute>yad-icon-browser</execute>
+            </action> </item>
+            <item label="IDLE"> <action name="Execute">
+                <execute>idle</execute>
+            </action> </item>
+            <item label="IDLE (using Python-3.9)"> <action name="Execute">
+                <execute>idle-python3.9</execute>
+            </action> </item>
+            <item label="KAppTemplate"> <action name="Execute">
+                <execute>kapptemplate</execute>
+            </action> </item>
+            <item label="Kite"> <action name="Execute">
+                <execute>/home/mw/.local/share/kite/kited</execute>
+            </action> </item>
+            <item label="Python3"> <action name="Execute">
+                <execute>python3 -m porcupine</execute>
+            </action> </item>
+            <item label="Qt 5 Assistant"> <action name="Execute">
+                <execute>/usr/lib/qt5/bin/assistant</execute>
+            </action> </item>
+            <item label="Qt 5 Designer"> <action name="Execute">
+                <execute>/usr/lib/qt5/bin/designer</execute>
+            </action> </item>
+            <item label="Qt 5 Linguist"> <action name="Execute">
+                <execute>/usr/lib/qt5/bin/linguist</execute>
+            </action> </item>
+            <item label="Scratch"> <action name="Execute">
+                <execute>scratch</execute>
+            </action> </item>
+            <item label="Squeak"> <action name="Execute">
+                <execute>squeak</execute>
+            </action> </item>
+            <item label="Tclsh8.6"> <action name="Execute">
+                <execute>alacritty -e tclsh8.6</execute>
+            </action> </item>
+            <item label="TkWish8.6"> <action name="Execute">
+                <execute>x-terminal-emulator -e /usr/bin/wish8.6</execute>
+            </action> </item>
+        </menu>
+        <menu id="2" label="Editors">
+            <item label="Emacs"> <action name="Execute">
+                <execute>alacritty -e emacs</execute>
+            </action> </item>
+            <item label="GVim"> <action name="Execute">
+                <execute>gvim</execute>
+            </action> </item>
+            <item label="KWrite"> <action name="Execute">
+                <execute>kwrite</execute>
+            </action> </item>
+            <item label="Nano"> <action name="Execute">
+                <execute>alacritty -e nano</execute>
+            </action> </item>
+            <item label="Neovim"> <action name="Execute">
+                <execute>alacritty -e nvim</execute>
+            </action> </item>
+            <item label="Neovim-Qt"> <action name="Execute">
+                <execute>nvim-qt</execute>
+            </action> </item>
+            <item label="Pico"> <action name="Execute">
+                <execute>alacritty -e pico</execute>
+            </action> </item>
+            <item label="Text Editor"> <action name="Execute">
+                <execute>gedit</execute>
+            </action> </item>
+            <item label="Vi"> <action name="Execute">
+                <execute>alacritty -e vi</execute>
+            </action> </item>
+            <item label="Vim"> <action name="Execute">
+                <execute>alacritty -e vim</execute>
+            </action> </item>
+            <item label="Xedit"> <action name="Execute">
+                <execute>xedit</execute>
+            </action> </item>
+        </menu>
+        <menu id="18" label="Games">
+            <menu id="17" label="Amusement">
+                <item label="Oclock"> <action name="Execute">
+                    <execute>oclock</execute>
+                </action> </item>
+                <item label="tty-clock"> <action name="Execute">
+                    <execute>alacritty -e tty-clock</execute>
+                </action> </item>
+                <item label="Xclock (analog)"> <action name="Execute">
+                    <execute>xclock -analog</execute>
+                </action> </item>
+                <item label="Xclock (digital)"> <action name="Execute">
+                    <execute>xclock -digital -update 1</execute>
+                </action> </item>
+                <item label="Xeyes"> <action name="Execute">
+                    <execute>xeyes</execute>
+                </action> </item>
+                <item label="Xlogo"> <action name="Execute">
+                    <execute>xlogo</execute>
+                </action> </item>
+            </menu>
+            <menu id="10" label="Arcade">
+                <item label="Epiphany"> <action name="Execute">
+                    <execute>epiphany-game</execute>
+                </action> </item>
+                <item label="Kolf"> <action name="Execute">
+                    <execute>kolf</execute>
+                </action> </item>
+            </menu>
+            <item label="Python3"> <action name="Execute">
+                <execute>python3 /home/mw/my-apps/Pong/pong11_sprites.py</execute>
+            </action> </item>
+        </menu>
+        <menu id="6" label="Graphics">
+            <item label="Deepin Image Viewer"> <action name="Execute">
+                <execute>deepin-image-viewer</execute>
+            </action> </item>
+            <item label="Document Scanner"> <action name="Execute">
+                <execute>simple-scan</execute>
+            </action> </item>
+            <item label="dotty"> <action name="Execute">
+                <execute>dotty</execute>
+            </action> </item>
+            <item label="Flameshot"> <action name="Execute">
+                <execute>flameshot</execute>
+            </action> </item>
+            <item label="GNU Image Manipulation Program"> <action name="Execute">
+                <execute>gimp-2.10</execute>
+            </action> </item>
+            <item label="Gpick"> <action name="Execute">
+                <execute>gpick</execute>
+            </action> </item>
+            <item label="Image Viewer"> <action name="Execute">
+                <execute>eog</execute>
+            </action> </item>
+            <item label="ImageMagick (color depth=q16)"> <action name="Execute">
+                <execute>display-im6.q16</execute>
+            </action> </item>
+            <item label="lefty"> <action name="Execute">
+                <execute>lefty</execute>
+            </action> </item>
+            <item label="Shotwell"> <action name="Execute">
+                <execute>shotwell</execute>
+            </action> </item>
+            <item label="Wordview"> <action name="Execute">
+                <execute>wordview</execute>
+            </action> </item>
+            <item label="Xditview"> <action name="Execute">
+                <execute>xditview</execute>
+            </action> </item>
+        </menu>
+        <menu id="7" label="Multimedia">
+            <item label="ALSA mixer"> <action name="Execute">
+                <execute>alacritty -e alsamixer</execute>
+            </action> </item>
+            <item label="Audio Recorder"> <action name="Execute">
+                <execute>audio-recorder</execute>
+            </action> </item>
+            <item label="Cheese"> <action name="Execute">
+                <execute>cheese</execute>
+            </action> </item>
+            <item label="Deepin Movie"> <action name="Execute">
+                <execute>deepin-movie</execute>
+            </action> </item>
+            <item label="mpv Media Player"> <action name="Execute">
+                <execute>mpv --player-operation-mode=pseudo-gui</execute>
+            </action> </item>
+            <item label="Music"> <action name="Execute">
+                <execute>deepin-music</execute>
+            </action> </item>
+            <item label="OBS Studio"> <action name="Execute">
+                <execute>obs</execute>
+            </action> </item>
+            <item label="PNMixer"> <action name="Execute">
+                <execute>pnmixer</execute>
+            </action> </item>
+            <item label="PulseAudio Volume Control"> <action name="Execute">
+                <execute>pavucontrol</execute>
+            </action> </item>
+            <item label="Videos"> <action name="Execute">
+                <execute>totem</execute>
+            </action> </item>
+            <item label="VLC media player"> <action name="Execute">
+                <execute>vlc</execute>
+            </action> </item>
+        </menu>
+        <menu id="5" label="Network">
+            <item label="Deluge"> <action name="Execute">
+                <execute>deluge-gtk</execute>
+            </action> </item>
+            <item label="Falkon"> <action name="Execute">
+                <execute>falkon</execute>
+            </action> </item>
+            <item label="FireFox"> <action name="Execute">
+                <execute>firefox</execute>
+            </action> </item>
+            <item label="FTP"> <action name="Execute">
+                <execute>alacritty -e ftp</execute>
+            </action> </item>
+            <item label="Geary"> <action name="Execute">
+                <execute>geary</execute>
+            </action> </item>
+            <item label="Google Chrome"> <action name="Execute">
+                <execute>google-chrome-stable</execute>
+            </action> </item>
+            <item label="Google Chrome"> <action name="Execute">
+                <execute>google-chrome</execute>
+            </action> </item>
+            <item label="LibreWolf (1)"> <action name="Execute">
+                <execute>LibreWolf.AppImage</execute>
+            </action> </item>
+            <item label="Mailspring"> <action name="Execute">
+                <execute>mailspring</execute>
+            </action> </item>
+            <item label="Microsoft Edge"> <action name="Execute">
+                <execute>microsoft-edge-stable</execute>
+            </action> </item>
+            <item label="Microsoft Edge"> <action name="Execute">
+                <execute>microsoft-edge</execute>
+            </action> </item>
+            <item label="Microsoft Edge (beta)"> <action name="Execute">
+                <execute>microsoft-edge-beta</execute>
+            </action> </item>
+            <item label="Microsoft Teams - Preview"> <action name="Execute">
+                <execute>teams</execute>
+            </action> </item>
+            <item label="Midori"> <action name="Execute">
+                <execute>midori</execute>
+            </action> </item>
+            <item label="Motrix"> <action name="Execute">
+                <execute>motrix</execute>
+            </action> </item>
+            <item label="Opera"> <action name="Execute">
+                <execute>opera</execute>
+            </action> </item>
+            <item label="Pling-Store (5.0.2) (1)"> <action name="Execute">
+                <execute>pling-store.AppImage</execute>
+            </action> </item>
+            <item label="qutebrowser"> <action name="Execute">
+                <execute>qutebrowser</execute>
+            </action> </item>
+            <item label="Remote Viewer"> <action name="Execute">
+                <execute>remote-viewer</execute>
+            </action> </item>
+            <item label="Telnet"> <action name="Execute">
+                <execute>alacritty -e telnet</execute>
+            </action> </item>
+            <item label="Transmission"> <action name="Execute">
+                <execute>transmission-gtk</execute>
+            </action> </item>
+            <item label="W3m"> <action name="Execute">
+                <execute>alacritty -e w3m</execute>
+            </action> </item>
+            <item label="w3m"> <action name="Execute">
+                <execute>alacritty -e w3m /usr/share/doc/w3m/MANUAL.html</execute>
+            </action> </item>
+            <item label="Zoom"> <action name="Execute">
+                <execute>zoom</execute>
+            </action> </item>
+        </menu>
+        <menu id="3" label="Office">
+            <item label="Atril Document Viewer"> <action name="Execute">
+                <execute>atril</execute>
+            </action> </item>
+            <item label="Calendar"> <action name="Execute">
+                <execute>gnome-calendar</execute>
+            </action> </item>
+            <item label="Contacts"> <action name="Execute">
+                <execute>gnome-contacts</execute>
+            </action> </item>
+            <item label="Digital Certificate for VBA Projects"> <action name="Execute">
+                <execute>env WINEPREFIX="/home/mw/.wine/office2013" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/mw/.wine/office2013/dosdevices/c:/users/mw/Start\\ Menu/Programs/Microsoft\\ Office/Microsoft\\ Office\\ 2010\\ Tools/Digital\\ Certificate\\ for\\ VBA\\ Projects.lnk</execute>
+            </action> </item>
+            <item label="Document Viewer"> <action name="Execute">
+                <execute>evince</execute>
+            </action> </item>
+            <item label="Evolution"> <action name="Execute">
+                <execute>evolution</execute>
+            </action> </item>
+            <item label="LibreOffice Impress"> <action name="Execute">
+                <execute>libreoffice</execute>
+            </action> </item>
+            <item label="Microsoft Access 2010"> <action name="Execute">
+                <execute>env WINEPREFIX="/home/mw/.wine/office2013" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/mw/.wine/office2013/dosdevices/c:/users/mw/Start\\ Menu/Programs/Microsoft\\ Office/Microsoft\\ Access\\ 2010.lnk</execute>
+            </action> </item>
+            <item label="Microsoft Clip Organizer"> <action name="Execute">
+                <execute>env WINEPREFIX="/home/mw/.wine/office2013" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/mw/.wine/office2013/dosdevices/c:/users/mw/Start\\ Menu/Programs/Microsoft\\ Office/Microsoft\\ Office\\ 2010\\ Tools/Microsoft\\ Clip\\ Organizer.lnk</execute>
+            </action> </item>
+            <item label="Microsoft Excel 2010"> <action name="Execute">
+                <execute>env WINEPREFIX="/home/mw/.wine/office2013" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/mw/.wine/office2013/dosdevices/c:/users/mw/Start\\ Menu/Programs/Microsoft\\ Office/Microsoft\\ Excel\\ 2010.lnk</execute>
+            </action> </item>
+            <item label="Microsoft InfoPath Designer 2010"> <action name="Execute">
+                <execute>env WINEPREFIX="/home/mw/.wine/office2013" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/mw/.wine/office2013/dosdevices/c:/users/mw/Start\\ Menu/Programs/Microsoft\\ Office/Microsoft\\ InfoPath\\ Designer\\ 2010.lnk</execute>
+            </action> </item>
+            <item label="Microsoft InfoPath Filler 2010"> <action name="Execute">
+                <execute>env WINEPREFIX="/home/mw/.wine/office2013" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/mw/.wine/office2013/dosdevices/c:/users/mw/Start\\ Menu/Programs/Microsoft\\ Office/Microsoft\\ InfoPath\\ Filler\\ 2010.lnk</execute>
+            </action> </item>
+            <item label="Microsoft Office 2010 Language Preferences"> <action name="Execute">
+                <execute>env WINEPREFIX="/home/mw/.wine/office2013" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/mw/.wine/office2013/dosdevices/c:/users/mw/Start\\ Menu/Programs/Microsoft\\ Office/Microsoft\\ Office\\ 2010\\ Tools/Microsoft\\ Office\\ 2010\\ Language\\ Preferences.lnk</execute>
+            </action> </item>
+            <item label="Microsoft Office 2010 Upload Center"> <action name="Execute">
+                <execute>env WINEPREFIX="/home/mw/.wine/office2013" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/mw/.wine/office2013/dosdevices/c:/users/mw/Start\\ Menu/Programs/Microsoft\\ Office/Microsoft\\ Office\\ 2010\\ Tools/Microsoft\\ Office\\ 2010\\ Upload\\ Center.lnk</execute>
+            </action> </item>
+            <item label="Microsoft Office Picture Manager"> <action name="Execute">
+                <execute>env WINEPREFIX="/home/mw/.wine/office2013" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/mw/.wine/office2013/dosdevices/c:/users/mw/Start\\ Menu/Programs/Microsoft\\ Office/Microsoft\\ Office\\ 2010\\ Tools/Microsoft\\ Office\\ Picture\\ Manager.lnk</execute>
+            </action> </item>
+            <item label="Microsoft OneNote 2010"> <action name="Execute">
+                <execute>env WINEPREFIX="/home/mw/.wine/office2013" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/mw/.wine/office2013/dosdevices/c:/users/mw/Start\\ Menu/Programs/Microsoft\\ Office/Microsoft\\ OneNote\\ 2010.lnk</execute>
+            </action> </item>
+            <item label="Microsoft Outlook 2010"> <action name="Execute">
+                <execute>env WINEPREFIX="/home/mw/.wine/office2013" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/mw/.wine/office2013/dosdevices/c:/users/mw/Start\\ Menu/Programs/Microsoft\\ Office/Microsoft\\ Outlook\\ 2010.lnk</execute>
+            </action> </item>
+            <item label="Microsoft PowerPoint 2010"> <action name="Execute">
+                <execute>env WINEPREFIX="/home/mw/.wine/office2013" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/mw/.wine/office2013/dosdevices/c:/users/mw/Start\\ Menu/Programs/Microsoft\\ Office/Microsoft\\ PowerPoint\\ 2010.lnk</execute>
+            </action> </item>
+            <item label="Microsoft Publisher 2010"> <action name="Execute">
+                <execute>env WINEPREFIX="/home/mw/.wine/office2013" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/mw/.wine/office2013/dosdevices/c:/users/mw/Start\\ Menu/Programs/Microsoft\\ Office/Microsoft\\ Publisher\\ 2010.lnk</execute>
+            </action> </item>
+            <item label="Microsoft SharePoint Workspace 2010"> <action name="Execute">
+                <execute>env WINEPREFIX="/home/mw/.wine/office2013" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/mw/.wine/office2013/dosdevices/c:/users/mw/Start\\ Menu/Programs/Microsoft\\ Office/Microsoft\\ SharePoint\\ Workspace\\ 2010.lnk</execute>
+            </action> </item>
+            <item label="Microsoft Word 2010"> <action name="Execute">
+                <execute>env WINEPREFIX="/home/mw/.wine/office2013" wine C:\\\\windows\\\\command\\\\start.exe /Unix /home/mw/.wine/office2013/dosdevices/c:/users/mw/Start\\ Menu/Programs/Microsoft\\ Office/Microsoft\\ Word\\ 2010.lnk</execute>
+            </action> </item>
+            <item label="MindMaster"> <action name="Execute">
+                <execute>/opt/MindMaster-8/MindMaster</execute>
+            </action> </item>
+            <item label="OneDrive"> <action name="Execute">
+                <execute>google-chrome --profile-directory=Default --app-id=fcehhdehopodfegecilgnfhpeilklbmo</execute>
+            </action> </item>
+            <item label="qpdfview"> <action name="Execute">
+                <execute>qpdfview</execute>
+            </action> </item>
+            <item label="WPS PDF"> <action name="Execute">
+                <execute>wpspdf</execute>
+            </action> </item>
+            <item label="WPS Presentation"> <action name="Execute">
+                <execute>wpp</execute>
+            </action> </item>
+            <item label="WPS Spreadsheets"> <action name="Execute">
+                <execute>et</execute>
+            </action> </item>
+            <item label="WPS Writer"> <action name="Execute">
+                <execute>wps</execute>
+            </action> </item>
+            <item label="Xbiff"> <action name="Execute">
+                <execute>xbiff</execute>
+            </action> </item>
+        </menu>
+        <menu id="39" label="Other">
+            <item label="Help"> <action name="Execute">
+                <execute>khelpcenter</execute>
+            </action> </item>
+            <item label="Pomatez"> <action name="Execute">
+                <execute>pomatez</execute>
+            </action> </item>
+            <item label="Telnet"> <action name="Execute">
+                <execute>alacritty -e telnet.netkit</execute>
+            </action> </item>
+        </menu>
+        <menu id="19" label="Shells">
+            <item label="Alacritty"> <action name="Execute">
+                <execute>alacritty</execute>
+            </action> </item>
+            <item label="Bash"> <action name="Execute">
+                <execute>alacritty -e bash --login</execute>
+            </action> </item>
+            <item label="Dash"> <action name="Execute">
+                <execute>alacritty -e dash -i</execute>
+            </action> </item>
+            <item label="Deepin Terminal"> <action name="Execute">
+                <execute>deepin-terminal</execute>
+            </action> </item>
+            <item label="File Manager PCManFM"> <action name="Execute">
+                <execute>pcmanfm</execute>
+            </action> </item>
+            <item label="Files"> <action name="Execute">
+                <execute>nautilus</execute>
+            </action> </item>
+            <item label="fish"> <action name="Execute">
+                <execute>alacritty -e fish</execute>
+            </action> </item>
+            <item label="GIT"> <action name="Execute">
+                <execute>alacritty -e git</execute>
+            </action> </item>
+            <item label="kitty"> <action name="Execute">
+                <execute>kitty</execute>
+            </action> </item>
+            <item label="Konsole"> <action name="Execute">
+                <execute>konsole</execute>
+            </action> </item>
+            <item label="Oracle VM VirtualBox"> <action name="Execute">
+                <execute>VirtualBox</execute>
+            </action> </item>
+            <item label="PlayOnLinux"> <action name="Execute">
+                <execute>playonlinux</execute>
+            </action> </item>
+            <item label="QTerminal"> <action name="Execute">
+                <execute>qterminal</execute>
+            </action> </item>
+            <item label="QTerminal drop down"> <action name="Execute">
+                <execute>qterminal --drop</execute>
+            </action> </item>
+            <item label="ranger"> <action name="Execute">
+                <execute>alacritty -e ranger</execute>
+            </action> </item>
+            <item label="Sh"> <action name="Execute">
+                <execute>alacritty -e sh --login</execute>
+            </action> </item>
+            <item label="Terminal"> <action name="Execute">
+                <execute>gnome-terminal</execute>
+            </action> </item>
+            <item label="Thunar File Manager"> <action name="Execute">
+                <execute>thunar</execute>
+            </action> </item>
+            <item label="Tilix"> <action name="Execute">
+                <execute>tilix</execute>
+            </action> </item>
+            <item label="UXTerm"> <action name="Execute">
+                <execute>uxterm</execute>
+            </action> </item>
+            <item label="VMWare"> <action name="Execute">
+                <execute>vmware</execute>
+            </action> </item>
+            <item label="Xterm"> <action name="Execute">
+                <execute>xterm</execute>
+            </action> </item>
+        </menu>
+        <menu id="37" label="System">
+            <menu id="36" label="Settings">
+                <menu id="21" label="GNOME">
+                    <item label="Advanced Network Configuration"> <action name="Execute">
+                        <execute>nm-connection-editor</execute>
+                    </action> </item>
+                    <item label="Bluetooth Manager"> <action name="Execute">
+                        <execute>blueman-manager</execute>
+                    </action> </item>
+                    <item label="Disks"> <action name="Execute">
+                        <execute>gnome-disks</execute>
+                    </action> </item>
+                    <item label="Graphics Tablet"> <action name="Execute">
+                        <execute>cinnamon-settings wacom</execute>
+                    </action> </item>
+                    <item label="Language Support"> <action name="Execute">
+                        <execute>gnome-language-selector</execute>
+                    </action> </item>
+                    <item label="Login Window"> <action name="Execute">
+                        <execute>pkexec lightdm-settings</execute>
+                    </action> </item>
+                    <item label="Main Menu"> <action name="Execute">
+                        <execute>alacarte</execute>
+                    </action> </item>
+                    <item label="Printers"> <action name="Execute">
+                        <execute>system-config-printer</execute>
+                    </action> </item>
+                    <item label="Settings"> <action name="Execute">
+                        <execute>gnome-control-center</execute>
+                    </action> </item>
+                    <item label="Software &amp; Updates"> <action name="Execute">
+                        <execute>software-properties-gtk</execute>
+                    </action> </item>
+                    <item label="Startup Applications"> <action name="Execute">
+                        <execute>gnome-session-properties</execute>
+                    </action> </item>
+                    <item label="Tweaks"> <action name="Execute">
+                        <execute>gnome-tweaks</execute>
+                    </action> </item>
+                </menu>
+                <menu id="35" label="Xfce">
+                    <item label="Additional Drivers"> <action name="Execute">
+                        <execute>software-properties-gtk --open-tab=4</execute>
+                    </action> </item>
+                    <item label="Bluetooth Adapters"> <action name="Execute">
+                        <execute>blueman-adapters</execute>
+                    </action> </item>
+                    <item label="Screensaver"> <action name="Execute">
+                        <execute>xscreensaver-demo</execute>
+                    </action> </item>
+                </menu>
+                <item label="Abstractile"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/abstractile -root</execute>
+                </action> </item>
+                <item label="Accessibility"> <action name="Execute">
+                    <execute>cinnamon-settings universal-access</execute>
+                </action> </item>
+                <item label="Account details"> <action name="Execute">
+                    <execute>cinnamon-settings user</execute>
+                </action> </item>
+                <item label="Anemone"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/anemone -root</execute>
+                </action> </item>
+                <item label="Anemotaxis"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/anemotaxis -root</execute>
+                </action> </item>
+                <item label="AntInspect"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/antinspect -root</execute>
+                </action> </item>
+                <item label="AntMaze"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/antmaze -root</execute>
+                </action> </item>
+                <item label="AntSpotlight"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/antspotlight -root</execute>
+                </action> </item>
+                <item label="Apollonian"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/apollonian -root</execute>
+                </action> </item>
+                <item label="AppImageLauncher Settings"> <action name="Execute">
+                    <execute>/home/mw/.local/lib/appimagelauncher-lite/appimagelauncher-lite.AppImage AppImageLauncherSettings</execute>
+                </action> </item>
+                <item label="AppImageLauncher Settings"> <action name="Execute">
+                    <execute>AppImageLauncherSettings</execute>
+                </action> </item>
+                <item label="Apple2"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/apple2 -root</execute>
+                </action> </item>
+                <item label="Applets"> <action name="Execute">
+                    <execute>cinnamon-settings applets</execute>
+                </action> </item>
+                <item label="Atlantis"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/atlantis -root</execute>
+                </action> </item>
+                <item label="Attraction"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/attraction -root</execute>
+                </action> </item>
+                <item label="Atunnel"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/atunnel -root</execute>
+                </action> </item>
+                <item label="Backgrounds"> <action name="Execute">
+                    <execute>cinnamon-settings backgrounds</execute>
+                </action> </item>
+                <item label="Barcode"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/barcode -root</execute>
+                </action> </item>
+                <item label="BinaryRing"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/binaryring -root</execute>
+                </action> </item>
+                <item label="Blaster"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/blaster -root</execute>
+                </action> </item>
+                <item label="BlinkBox"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/blinkbox -root</execute>
+                </action> </item>
+                <item label="BlitSpin"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/blitspin -root</execute>
+                </action> </item>
+                <item label="BlockTube"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/blocktube -root</execute>
+                </action> </item>
+                <item label="Boing"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/boing -root</execute>
+                </action> </item>
+                <item label="Bouboule"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/bouboule -root</execute>
+                </action> </item>
+                <item label="BouncingCow"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/bouncingcow -root</execute>
+                </action> </item>
+                <item label="Boxed"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/boxed -root</execute>
+                </action> </item>
+                <item label="BoxFit"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/boxfit -root</execute>
+                </action> </item>
+                <item label="Braid"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/braid -root</execute>
+                </action> </item>
+                <item label="Bubble3D"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/bubble3d -root</execute>
+                </action> </item>
+                <item label="Bumps"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/bumps -root</execute>
+                </action> </item>
+                <item label="Cage"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/cage -root</execute>
+                </action> </item>
+                <item label="Carousel"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/carousel -root</execute>
+                </action> </item>
+                <item label="CCurve"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/ccurve -root</execute>
+                </action> </item>
+                <item label="Celtic"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/celtic -root</execute>
+                </action> </item>
+                <item label="Circuit"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/circuit -root</execute>
+                </action> </item>
+                <item label="Cityflow"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/cityflow -root</execute>
+                </action> </item>
+                <item label="CloudLife"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/cloudlife -root</execute>
+                </action> </item>
+                <item label="Color"> <action name="Execute">
+                    <execute>cinnamon-settings color</execute>
+                </action> </item>
+                <item label="CompanionCube"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/companioncube -root</execute>
+                </action> </item>
+                <item label="Compass"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/compass -root</execute>
+                </action> </item>
+                <item label="Coral"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/coral -root</execute>
+                </action> </item>
+                <item label="Crackberg"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/crackberg -root</execute>
+                </action> </item>
+                <item label="Crumbler"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/crumbler -root</execute>
+                </action> </item>
+                <item label="Crystal"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/crystal -root</execute>
+                </action> </item>
+                <item label="Cube21"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/cube21 -root</execute>
+                </action> </item>
+                <item label="Cubenetic"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/cubenetic -root</execute>
+                </action> </item>
+                <item label="CubeStack"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/cubestack -root</execute>
+                </action> </item>
+                <item label="CubeStorm"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/cubestorm -root</execute>
+                </action> </item>
+                <item label="CubeTwist"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/cubetwist -root</execute>
+                </action> </item>
+                <item label="CubicGrid"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/cubicgrid -root</execute>
+                </action> </item>
+                <item label="Customize Look and Feel"> <action name="Execute">
+                    <execute>lxappearance</execute>
+                </action> </item>
+                <item label="CWaves"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/cwaves -root</execute>
+                </action> </item>
+                <item label="Cynosure"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/cynosure -root</execute>
+                </action> </item>
+                <item label="DangerBall"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/dangerball -root</execute>
+                </action> </item>
+                <item label="Date &amp; Time"> <action name="Execute">
+                    <execute>cinnamon-settings calendar</execute>
+                </action> </item>
+                <item label="DecayScreen"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/decayscreen -root</execute>
+                </action> </item>
+                <item label="Deco"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/deco -root</execute>
+                </action> </item>
+                <item label="Default applications for LXSession"> <action name="Execute">
+                    <execute>lxsession-default-apps</execute>
+                </action> </item>
+                <item label="Deluxe"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/deluxe -root</execute>
+                </action> </item>
+                <item label="Demon"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/demon -root</execute>
+                </action> </item>
+                <item label="Desklets"> <action name="Execute">
+                    <execute>cinnamon-settings desklets</execute>
+                </action> </item>
+                <item label="Desktop"> <action name="Execute">
+                    <execute>cinnamon-settings desktop</execute>
+                </action> </item>
+                <item label="Desktop Preferences"> <action name="Execute">
+                    <execute>pcmanfm --desktop-pref</execute>
+                </action> </item>
+                <item label="Discoball"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/discoball -root</execute>
+                </action> </item>
+                <item label="Discrete"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/discrete -root</execute>
+                </action> </item>
+                <item label="Display"> <action name="Execute">
+                    <execute>cinnamon-settings display</execute>
+                </action> </item>
+                <item label="Distort"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/distort -root</execute>
+                </action> </item>
+                <item label="Drift"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/drift -root</execute>
+                </action> </item>
+                <item label="DymaxionMap"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/dymaxionmap -root</execute>
+                </action> </item>
+                <item label="Effects"> <action name="Execute">
+                    <execute>cinnamon-settings effects</execute>
+                </action> </item>
+                <item label="Endgame"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/endgame -root</execute>
+                </action> </item>
+                <item label="EnergyStream"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/energystream -root</execute>
+                </action> </item>
+                <item label="Engine"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/engine -root</execute>
+                </action> </item>
+                <item label="Epicycle"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/epicycle -root</execute>
+                </action> </item>
+                <item label="Eruption"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/eruption -root</execute>
+                </action> </item>
+                <item label="Esper"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/esper -root</execute>
+                </action> </item>
+                <item label="Euler2D"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/euler2d -root</execute>
+                </action> </item>
+                <item label="Extensions"> <action name="Execute">
+                    <execute>cinnamon-settings extensions</execute>
+                </action> </item>
+                <item label="Extrusion"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/extrusion -root</execute>
+                </action> </item>
+                <item label="FadePlot"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/fadeplot -root</execute>
+                </action> </item>
+                <item label="Fiberlamp"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/fiberlamp -root</execute>
+                </action> </item>
+                <item label="File Manager Settings"> <action name="Execute">
+                    <execute>thunar-settings</execute>
+                </action> </item>
+                <item label="Filmleader"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/filmleader -root</execute>
+                </action> </item>
+                <item label="Fireworkx"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/fireworkx -root</execute>
+                </action> </item>
+                <item label="Flame"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/flame -root</execute>
+                </action> </item>
+                <item label="FlipFlop"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/flipflop -root</execute>
+                </action> </item>
+                <item label="FlipScreen3D"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/flipscreen3d -root</execute>
+                </action> </item>
+                <item label="FlipText"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/fliptext -root</execute>
+                </action> </item>
+                <item label="Flow"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/flow -root</execute>
+                </action> </item>
+                <item label="FluidBalls"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/fluidballs -root</execute>
+                </action> </item>
+                <item label="Flurry"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/flurry -root</execute>
+                </action> </item>
+                <item label="FlyingToasters"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/flyingtoasters -root</execute>
+                </action> </item>
+                <item label="Font Selection"> <action name="Execute">
+                    <execute>cinnamon-settings fonts</execute>
+                </action> </item>
+                <item label="FontGlide"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/fontglide -root</execute>
+                </action> </item>
+                <item label="FuzzyFlakes"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/fuzzyflakes -root</execute>
+                </action> </item>
+                <item label="Galaxy"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/galaxy -root</execute>
+                </action> </item>
+                <item label="Gears"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/gears -root</execute>
+                </action> </item>
+                <item label="General"> <action name="Execute">
+                    <execute>cinnamon-settings general</execute>
+                </action> </item>
+                <item label="Geodesic"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/geodesic -root</execute>
+                </action> </item>
+                <item label="GeodesicGears"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/geodesicgears -root</execute>
+                </action> </item>
+                <item label="GFlux"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/gflux -root</execute>
+                </action> </item>
+                <item label="GLBlur"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/glblur -root</execute>
+                </action> </item>
+                <item label="GLCells"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/glcells -root</execute>
+                </action> </item>
+                <item label="Gleidescope"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/gleidescope -root</execute>
+                </action> </item>
+                <item label="GLHanoi"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/glhanoi -root</execute>
+                </action> </item>
+                <item label="Glitchpeg"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/glitchpeg -root</execute>
+                </action> </item>
+                <item label="GLKnots"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/glknots -root</execute>
+                </action> </item>
+                <item label="GLMatrix"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/glmatrix -root</execute>
+                </action> </item>
+                <item label="GLPlanet"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/glplanet -root</execute>
+                </action> </item>
+                <item label="GLSchool"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/glschool -root</execute>
+                </action> </item>
+                <item label="GLSlideshow"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/glslideshow -root</execute>
+                </action> </item>
+                <item label="GLSnake"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/glsnake -root</execute>
+                </action> </item>
+                <item label="GLText"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/gltext -root</execute>
+                </action> </item>
+                <item label="Goop"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/goop -root</execute>
+                </action> </item>
+                <item label="Grav"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/grav -root</execute>
+                </action> </item>
+                <item label="Greynetic"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/greynetic -root</execute>
+                </action> </item>
+                <item label="Halftone"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/halftone -root</execute>
+                </action> </item>
+                <item label="Halo"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/halo -root</execute>
+                </action> </item>
+                <item label="Handsy"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/handsy -root</execute>
+                </action> </item>
+                <item label="Helix"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/helix -root</execute>
+                </action> </item>
+                <item label="Hexadrop"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/hexadrop -root</execute>
+                </action> </item>
+                <item label="Hexstrut"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/hexstrut -root</execute>
+                </action> </item>
+                <item label="Hilbert"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/hilbert -root</execute>
+                </action> </item>
+                <item label="Hopalong"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/hopalong -root</execute>
+                </action> </item>
+                <item label="Hot Corners"> <action name="Execute">
+                    <execute>cinnamon-settings hotcorner</execute>
+                </action> </item>
+                <item label="Hydrostat"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/hydrostat -root</execute>
+                </action> </item>
+                <item label="Hypertorus"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/hypertorus -root</execute>
+                </action> </item>
+                <item label="Hypnowheel"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/hypnowheel -root</execute>
+                </action> </item>
+                <item label="IBus Preferences"> <action name="Execute">
+                    <execute>ibus-setup</execute>
+                </action> </item>
+                <item label="IFS"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/ifs -root</execute>
+                </action> </item>
+                <item label="IMSMap"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/imsmap -root</execute>
+                </action> </item>
+                <item label="Input Method"> <action name="Execute">
+                    <execute>im-config</execute>
+                </action> </item>
+                <item label="Interaggregate"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/interaggregate -root</execute>
+                </action> </item>
+                <item label="Interference"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/interference -root</execute>
+                </action> </item>
+                <item label="Intermomentary"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/intermomentary -root</execute>
+                </action> </item>
+                <item label="JigglyPuff"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/jigglypuff -root</execute>
+                </action> </item>
+                <item label="Jigsaw"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/jigsaw -root</execute>
+                </action> </item>
+                <item label="Juggler3D"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/juggler3d -root</execute>
+                </action> </item>
+                <item label="Julia"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/julia -root</execute>
+                </action> </item>
+                <item label="Kaleidescope"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/kaleidescope -root</execute>
+                </action> </item>
+                <item label="Kaleidocycle"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/kaleidocycle -root</execute>
+                </action> </item>
+                <item label="Keyboard"> <action name="Execute">
+                    <execute>cinnamon-settings keyboard</execute>
+                </action> </item>
+                <item label="Klein"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/klein -root</execute>
+                </action> </item>
+                <item label="Kumppa"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/kumppa -root</execute>
+                </action> </item>
+                <item label="Kvantum Manager"> <action name="Execute">
+                    <execute>kvantummanager</execute>
+                </action> </item>
+                <item label="Lament"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/lament -root</execute>
+                </action> </item>
+                <item label="Lavalite"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/lavalite -root</execute>
+                </action> </item>
+                <item label="LCDscrub"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/lcdscrub -root</execute>
+                </action> </item>
+                <item label="Livepatch"> <action name="Execute">
+                    <execute>software-properties-gtk --open-tab=6</execute>
+                </action> </item>
+                <item label="Lockward"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/lockward -root</execute>
+                </action> </item>
+                <item label="Loop"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/loop -root</execute>
+                </action> </item>
+                <item label="m6502"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/m6502 -root</execute>
+                </action> </item>
+                <item label="Maze"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/maze -root</execute>
+                </action> </item>
+                <item label="Maze3D"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/maze3d -root</execute>
+                </action> </item>
+                <item label="MemScroller"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/memscroller -root</execute>
+                </action> </item>
+                <item label="Menger"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/menger -root</execute>
+                </action> </item>
+                <item label="MetaBalls"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/metaballs -root</execute>
+                </action> </item>
+                <item label="MirrorBlob"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/mirrorblob -root</execute>
+                </action> </item>
+                <item label="Moebius"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/moebius -root</execute>
+                </action> </item>
+                <item label="MoebiusGears"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/moebiusgears -root</execute>
+                </action> </item>
+                <item label="Moire"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/moire -root</execute>
+                </action> </item>
+                <item label="Moire2"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/moire2 -root</execute>
+                </action> </item>
+                <item label="Molecule"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/molecule -root</execute>
+                </action> </item>
+                <item label="Monitor Settings"> <action name="Execute">
+                    <execute>lxrandr</execute>
+                </action> </item>
+                <item label="Morph3D"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/morph3d -root</execute>
+                </action> </item>
+                <item label="Mountain"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/mountain -root</execute>
+                </action> </item>
+                <item label="Mouse and Touchpad"> <action name="Execute">
+                    <execute>cinnamon-settings mouse</execute>
+                </action> </item>
+                <item label="Mozc Setup"> <action name="Execute">
+                    <execute>/usr/lib/mozc/mozc_tool --mode=config_dialog</execute>
+                </action> </item>
+                <item label="Munch"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/munch -root</execute>
+                </action> </item>
+                <item label="NerveRot"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/nerverot -root</execute>
+                </action> </item>
+                <item label="Network"> <action name="Execute">
+                    <execute>cinnamon-settings network</execute>
+                </action> </item>
+                <item label="nitrogen"> <action name="Execute">
+                    <execute>nitrogen</execute>
+                </action> </item>
+                <item label="Noof"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/noof -root</execute>
+                </action> </item>
+                <item label="NoseGuy"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/noseguy -root</execute>
+                </action> </item>
+                <item label="Notifications"> <action name="Execute">
+                    <execute>cinnamon-settings notifications</execute>
+                </action> </item>
+                <item label="NVIDIA X Server Settings"> <action name="Execute">
+                    <execute>nvidia-settings</execute>
+                </action> </item>
+                <item label="Onboard Settings"> <action name="Execute">
+                    <execute>onboard-settings</execute>
+                </action> </item>
+                <item label="Online Accounts"> <action name="Execute">
+                    <execute>cinnamon-settings online-accounts</execute>
+                </action> </item>
+                <item label="Openbox Configuration Manager"> <action name="Execute">
+                    <execute>obconf</execute>
+                </action> </item>
+                <item label="Pacman"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/pacman -root</execute>
+                </action> </item>
+                <item label="Panel"> <action name="Execute">
+                    <execute>cinnamon-settings panel</execute>
+                </action> </item>
+                <item label="Passwords and Keys"> <action name="Execute">
+                    <execute>seahorse</execute>
+                </action> </item>
+                <item label="Pedal"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/pedal -root</execute>
+                </action> </item>
+                <item label="Peepers"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/peepers -root</execute>
+                </action> </item>
+                <item label="Penetrate"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/penetrate -root</execute>
+                </action> </item>
+                <item label="Penrose"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/penrose -root</execute>
+                </action> </item>
+                <item label="Petri"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/petri -root</execute>
+                </action> </item>
+                <item label="Phosphor"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/phosphor -root</execute>
+                </action> </item>
+                <item label="Photopile"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/photopile -root</execute>
+                </action> </item>
+                <item label="Piecewise"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/piecewise -root</execute>
+                </action> </item>
+                <item label="Pinion"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/pinion -root</execute>
+                </action> </item>
+                <item label="Pipes"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/pipes -root</execute>
+                </action> </item>
+                <item label="Polyhedra"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/polyhedra -root</execute>
+                </action> </item>
+                <item label="Polyominoes"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/polyominoes -root</execute>
+                </action> </item>
+                <item label="Polytopes"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/polytopes -root</execute>
+                </action> </item>
+                <item label="Pong"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/pong -root</execute>
+                </action> </item>
+                <item label="Power Management"> <action name="Execute">
+                    <execute>cinnamon-settings power</execute>
+                </action> </item>
+                <item label="Power Manager"> <action name="Execute">
+                    <execute>xfce4-power-manager-settings</execute>
+                </action> </item>
+                <item label="Preferred Applications"> <action name="Execute">
+                    <execute>cinnamon-settings default</execute>
+                </action> </item>
+                <item label="Privacy"> <action name="Execute">
+                    <execute>cinnamon-settings privacy</execute>
+                </action> </item>
+                <item label="ProjectivePlane"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/projectiveplane -root</execute>
+                </action> </item>
+                <item label="Providence"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/providence -root</execute>
+                </action> </item>
+                <item label="Pulsar"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/pulsar -root</execute>
+                </action> </item>
+                <item label="Pyro"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/pyro -root</execute>
+                </action> </item>
+                <item label="Qix"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/qix -root</execute>
+                </action> </item>
+                <item label="QuasiCrystal"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/quasicrystal -root</execute>
+                </action> </item>
+                <item label="Queens"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/queens -root</execute>
+                </action> </item>
+                <item label="RaverHoop"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/raverhoop -root</execute>
+                </action> </item>
+                <item label="RazzleDazzle"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/razzledazzle -root</execute>
+                </action> </item>
+                <item label="RDbomb"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/rd-bomb -root</execute>
+                </action> </item>
+                <item label="Removable Drives and Media"> <action name="Execute">
+                    <execute>thunar-volman-settings</execute>
+                </action> </item>
+                <item label="Ripples"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/ripples -root</execute>
+                </action> </item>
+                <item label="Rocks"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/rocks -root</execute>
+                </action> </item>
+                <item label="RomanBoy"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/romanboy -root</execute>
+                </action> </item>
+                <item label="Rorschach"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/rorschach -root</execute>
+                </action> </item>
+                <item label="RotZoomer"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/rotzoomer -root</execute>
+                </action> </item>
+                <item label="Rubik"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/rubik -root</execute>
+                </action> </item>
+                <item label="RubikBlocks"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/rubikblocks -root</execute>
+                </action> </item>
+                <item label="SBalls"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/sballs -root</execute>
+                </action> </item>
+                <item label="Screensaver"> <action name="Execute">
+                    <execute>cinnamon-settings screensaver</execute>
+                </action> </item>
+                <item label="ShadeBobs"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/shadebobs -root</execute>
+                </action> </item>
+                <item label="Sierpinski"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/sierpinski -root</execute>
+                </action> </item>
+                <item label="Sierpinski3D"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/sierpinski3d -root</execute>
+                </action> </item>
+                <item label="SkyTentacles"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/skytentacles -root</execute>
+                </action> </item>
+                <item label="SlideScreen"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/slidescreen -root</execute>
+                </action> </item>
+                <item label="Slip"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/slip -root</execute>
+                </action> </item>
+                <item label="Sonar"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/sonar -root</execute>
+                </action> </item>
+                <item label="Sound"> <action name="Execute">
+                    <execute>cinnamon-settings sound</execute>
+                </action> </item>
+                <item label="SpeedMine"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/speedmine -root</execute>
+                </action> </item>
+                <item label="Spheremonics"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/spheremonics -root</execute>
+                </action> </item>
+                <item label="SplitFlap"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/splitflap -root</execute>
+                </action> </item>
+                <item label="Splodesic"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/splodesic -root</execute>
+                </action> </item>
+                <item label="Spotlight"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/spotlight -root</execute>
+                </action> </item>
+                <item label="Sproingies"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/sproingies -root</execute>
+                </action> </item>
+                <item label="Squiral"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/squiral -root</execute>
+                </action> </item>
+                <item label="Stairs"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/stairs -root</execute>
+                </action> </item>
+                <item label="Starfish"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/starfish -root</execute>
+                </action> </item>
+                <item label="Startup Applications"> <action name="Execute">
+                    <execute>cinnamon-settings startup</execute>
+                </action> </item>
+                <item label="StarWars"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/starwars -root</execute>
+                </action> </item>
+                <item label="StonerView"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/stonerview -root</execute>
+                </action> </item>
+                <item label="Strange"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/strange -root</execute>
+                </action> </item>
+                <item label="Substrate"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/substrate -root</execute>
+                </action> </item>
+                <item label="Superquadrics"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/superquadrics -root</execute>
+                </action> </item>
+                <item label="Surfaces"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/surfaces -root</execute>
+                </action> </item>
+                <item label="Swirl"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/swirl -root</execute>
+                </action> </item>
+                <item label="Synaptic Package Manager"> <action name="Execute">
+                    <execute>synaptic-pkexec</execute>
+                </action> </item>
+                <item label="System Info"> <action name="Execute">
+                    <execute>cinnamon-settings info</execute>
+                </action> </item>
+                <item label="System Settings"> <action name="Execute">
+                    <execute>cinnamon-settings</execute>
+                </action> </item>
+                <item label="Tangram"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/tangram -root</execute>
+                </action> </item>
+                <item label="Tessellimage"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/tessellimage -root</execute>
+                </action> </item>
+                <item label="Themes"> <action name="Execute">
+                    <execute>cinnamon-settings themes</execute>
+                </action> </item>
+                <item label="Thornbird"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/thornbird -root</execute>
+                </action> </item>
+                <item label="TimeTunnel"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/timetunnel -root</execute>
+                </action> </item>
+                <item label="Tint2 Settings"> <action name="Execute">
+                    <execute>tint2conf</execute>
+                </action> </item>
+                <item label="TopBlock"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/topblock -root</execute>
+                </action> </item>
+                <item label="Triangle"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/triangle -root</execute>
+                </action> </item>
+                <item label="TronBit"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/tronbit -root</execute>
+                </action> </item>
+                <item label="Truchet"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/truchet -root</execute>
+                </action> </item>
+                <item label="Twang"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/twang -root</execute>
+                </action> </item>
+                <item label="Unicrud"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/unicrud -root</execute>
+                </action> </item>
+                <item label="UnknownPleasures"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/unknownpleasures -root</execute>
+                </action> </item>
+                <item label="Users and Groups"> <action name="Execute">
+                    <execute>cinnamon-settings-users</execute>
+                </action> </item>
+                <item label="Vermiculate"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/vermiculate -root</execute>
+                </action> </item>
+                <item label="Vfeedback"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/vfeedback -root</execute>
+                </action> </item>
+                <item label="VidWhacker"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/vidwhacker -root</execute>
+                </action> </item>
+                <item label="Vigilance"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/vigilance -root</execute>
+                </action> </item>
+                <item label="Voronoi"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/voronoi -root</execute>
+                </action> </item>
+                <item label="Wander"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/wander -root</execute>
+                </action> </item>
+                <item label="WhirlWindWarp"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/whirlwindwarp -root</execute>
+                </action> </item>
+                <item label="Window Manager"> <action name="Execute">
+                    <execute>xfwm4-settings</execute>
+                </action> </item>
+                <item label="Window Manager Tweaks"> <action name="Execute">
+                    <execute>xfwm4-tweaks-settings</execute>
+                </action> </item>
+                <item label="Window Tiling"> <action name="Execute">
+                    <execute>cinnamon-settings tiling</execute>
+                </action> </item>
+                <item label="Windows"> <action name="Execute">
+                    <execute>cinnamon-settings windows</execute>
+                </action> </item>
+                <item label="WindupRobot"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/winduprobot -root</execute>
+                </action> </item>
+                <item label="Workspaces"> <action name="Execute">
+                    <execute>xfwm4-workspace-settings</execute>
+                </action> </item>
+                <item label="Workspaces"> <action name="Execute">
+                    <execute>cinnamon-settings workspaces</execute>
+                </action> </item>
+                <item label="Wormhole"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/wormhole -root</execute>
+                </action> </item>
+                <item label="XAnalogTV"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/xanalogtv -root</execute>
+                </action> </item>
+                <item label="XFlame"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/xflame -root</execute>
+                </action> </item>
+                <item label="Xfontsel"> <action name="Execute">
+                    <execute>xfontsel</execute>
+                </action> </item>
+                <item label="XJack"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/xjack -root</execute>
+                </action> </item>
+                <item label="XLyap"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/xlyap -root</execute>
+                </action> </item>
+                <item label="XMatrix"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/xmatrix -root</execute>
+                </action> </item>
+                <item label="XRaySwarm"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/xrayswarm -root</execute>
+                </action> </item>
+                <item label="XSpirograph"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/xspirograph -root</execute>
+                </action> </item>
+                <item label="Zoom"> <action name="Execute">
+                    <execute>/usr/lib/xscreensaver/zoom -root</execute>
+                </action> </item>
+            </menu>
+            <item label="Aptitude Package Manager (text)"> <action name="Execute">
+                <execute>alacritty -e aptitude-curses</execute>
+            </action> </item>
+            <item label="Budgie Desktop Settings"> <action name="Execute">
+                <execute>budgie-desktop-settings</execute>
+            </action> </item>
+            <item label="conky"> <action name="Execute">
+                <execute>conky --daemonize --pause=1</execute>
+            </action> </item>
+            <item label="dconf Editor"> <action name="Execute">
+                <execute>dconf-editor</execute>
+            </action> </item>
+            <item label="Debian Task selector"> <action name="Execute">
+                <execute>alacritty -e su-to-root -c tasksel</execute>
+            </action> </item>
+            <item label="Discover"> <action name="Execute">
+                <execute>plasma-discover</execute>
+            </action> </item>
+            <item label="Disk Usage Analyzer"> <action name="Execute">
+                <execute>baobab</execute>
+            </action> </item>
+            <item label="Eddy"> <action name="Execute">
+                <execute>com.github.donadigo.eddy</execute>
+            </action> </item>
+            <item label="Editres"> <action name="Execute">
+                <execute>editres</execute>
+            </action> </item>
+            <item label="GDebi Package Installer"> <action name="Execute">
+                <execute>gdebi-gtk</execute>
+            </action> </item>
+            <item label="GNOME System Monitor"> <action name="Execute">
+                <execute>gnome-system-monitor</execute>
+            </action> </item>
+            <item label="Htop"> <action name="Execute">
+                <execute>alacritty -e htop</execute>
+            </action> </item>
+            <item label="KSysGuard"> <action name="Execute">
+                <execute>ksysguard</execute>
+            </action> </item>
+            <item label="KWalletManager"> <action name="Execute">
+                <execute>kwalletmanager5</execute>
+            </action> </item>
+            <item label="Laptop Mode Tools Configuration"> <action name="Execute">
+                <execute>lmt-config-gui-pkexec</execute>
+            </action> </item>
+            <item label="Logout (obsession)"> <action name="Execute">
+                <execute>obsession-logout</execute>
+            </action> </item>
+            <item label="Package Installer"> <action name="Execute">
+                <execute>deepin-deb-installer</execute>
+            </action> </item>
+            <item label="PeaZip"> <action name="Execute">
+                <execute>peazip</execute>
+            </action> </item>
+            <item label="Pop!_Shop"> <action name="Execute">
+                <execute>io.elementary.appcenter</execute>
+            </action> </item>
+            <item label="Power Statistics"> <action name="Execute">
+                <execute>gnome-power-statistics</execute>
+            </action> </item>
+            <item label="Pstree"> <action name="Execute">
+                <execute>alacritty -e pstree.x11</execute>
+            </action> </item>
+            <item label="Synaptic Package Manager"> <action name="Execute">
+                <execute>x-terminal-emulator -e synaptic-pkexec</execute>
+            </action> </item>
+            <item label="System Settings"> <action name="Execute">
+                <execute>io.elementary.switchboard</execute>
+            </action> </item>
+            <item label="Task Manager"> <action name="Execute">
+                <execute>lxtask</execute>
+            </action> </item>
+            <item label="Tint2"> <action name="Execute">
+                <execute>tint2</execute>
+            </action> </item>
+            <item label="Top"> <action name="Execute">
+                <execute>alacritty -e top</execute>
+            </action> </item>
+            <item label="USB Flasher"> <action name="Execute">
+                <execute>popsicle-gtk</execute>
+            </action> </item>
+            <item label="Virtual Machine Manager"> <action name="Execute">
+                <execute>virt-manager</execute>
+            </action> </item>
+            <item label="Virtual Network Editor"> <action name="Execute">
+                <execute>vmware-netcfg</execute>
+            </action> </item>
+            <item label="VMware Player"> <action name="Execute">
+                <execute>vmplayer</execute>
+            </action> </item>
+            <item label="Xclipboard"> <action name="Execute">
+                <execute>xclipboard</execute>
+            </action> </item>
+            <item label="Xev"> <action name="Execute">
+                <execute>x-terminal-emulator -e xev</execute>
+            </action> </item>
+            <item label="Xkill"> <action name="Execute">
+                <execute>xkill</execute>
+            </action> </item>
+            <item label="Xload"> <action name="Execute">
+                <execute>xload</execute>
+            </action> </item>
+            <item label="Xrefresh"> <action name="Execute">
+                <execute>xrefresh</execute>
+            </action> </item>
+            <item label="Y PPA Manager"> <action name="Execute">
+                <execute>y-pkexec</execute>
+            </action> </item>
+        </menu>
+        <menu id="38" label="Utilities">
+            <item label="Activate ScreenSaver (Next)"> <action name="Execute">
+                <execute>xscreensaver-command -next</execute>
+            </action> </item>
+            <item label="Activate ScreenSaver (Previous)"> <action name="Execute">
+                <execute>xscreensaver-command -prev</execute>
+            </action> </item>
+            <item label="Activate ScreenSaver (Random)"> <action name="Execute">
+                <execute>xscreensaver-command -activate</execute>
+            </action> </item>
+            <item label="AppImage Pool"> <action name="Execute">
+                <execute>appimagepool-x86_64_ff34e2020db9de58872352ad2ab73a18.AppImage</execute>
+            </action> </item>
+            <item label="Archive Manager"> <action name="Execute">
+                <execute>file-roller</execute>
+            </action> </item>
+            <item label="balenaEtcher"> <action name="Execute">
+                <execute>/opt/balenaEtcher/balena-etcher-electron</execute>
+            </action> </item>
+            <item label="Bc"> <action name="Execute">
+                <execute>alacritty -e bc</execute>
+            </action> </item>
+            <item label="Caffeine"> <action name="Execute">
+                <execute>caffeine</execute>
+            </action> </item>
+            <item label="Caffeine Indicator"> <action name="Execute">
+                <execute>caffeine-indicator</execute>
+            </action> </item>
+            <item label="Calculator"> <action name="Execute">
+                <execute>gnome-calculator</execute>
+            </action> </item>
+            <item label="Character Map"> <action name="Execute">
+                <execute>gucharmap</execute>
+            </action> </item>
+            <item label="Clocks"> <action name="Execute">
+                <execute>gnome-clocks</execute>
+            </action> </item>
+            <item label="CMatrix"> <action name="Execute">
+                <execute>alacritty -e cmatrix</execute>
+            </action> </item>
+            <item label="compton"> <action name="Execute">
+                <execute>compton</execute>
+            </action> </item>
+            <item label="Conky Manager"> <action name="Execute">
+                <execute>conky-manager2</execute>
+            </action> </item>
+            <item label="Dc"> <action name="Execute">
+                <execute>alacritty -e dc</execute>
+            </action> </item>
+            <item label="Deepin Calculator"> <action name="Execute">
+                <execute>deepin-calculator</execute>
+            </action> </item>
+            <item label="Demo Screen Hacks"> <action name="Execute">
+                <execute>xscreensaver-command -demo</execute>
+            </action> </item>
+            <item label="Disable XScreenSaver"> <action name="Execute">
+                <execute>xscreensaver-command -exit</execute>
+            </action> </item>
+            <item label="Enable XScreenSaver"> <action name="Execute">
+                <execute>xscreensaver</execute>
+            </action> </item>
+            <item label="Extensions"> <action name="Execute">
+                <execute>gnome-extensions-app</execute>
+            </action> </item>
+            <item label="Filelight"> <action name="Execute">
+                <execute>filelight</execute>
+            </action> </item>
+            <item label="Files"> <action name="Execute">
+                <execute>nemo</execute>
+            </action> </item>
+            <item label="Fonts"> <action name="Execute">
+                <execute>gnome-font-viewer</execute>
+            </action> </item>
+            <item label="Help"> <action name="Execute">
+                <execute>yelp</execute>
+            </action> </item>
+            <item label="KFind"> <action name="Execute">
+                <execute>kfind</execute>
+            </action> </item>
+            <item label="Klipper"> <action name="Execute">
+                <execute>klipper</execute>
+            </action> </item>
+            <item label="Lock Screen (XScreenSaver)"> <action name="Execute">
+                <execute>xscreensaver-command -lock</execute>
+            </action> </item>
+            <item label="Onboard"> <action name="Execute">
+                <execute>onboard</execute>
+            </action> </item>
+            <item label="picom"> <action name="Execute">
+                <execute>picom</execute>
+            </action> </item>
+            <item label="Plank"> <action name="Execute">
+                <execute>plank</execute>
+            </action> </item>
+            <item label="Pomotroid"> <action name="Execute">
+                <execute>pomotroid</execute>
+            </action> </item>
+            <item label="Reinitialize XScreenSaver"> <action name="Execute">
+                <execute>xscreensaver-command -restart</execute>
+            </action> </item>
+            <item label="ScreenSaver Preferences"> <action name="Execute">
+                <execute>xscreensaver-command -prefs</execute>
+            </action> </item>
+            <item label="Screenshot"> <action name="Execute">
+                <execute>gnome-screenshot --interactive</execute>
+            </action> </item>
+            <item label="Stacer"> <action name="Execute">
+                <execute>stacer</execute>
+            </action> </item>
+            <item label="TeXInfo"> <action name="Execute">
+                <execute>alacritty -e info</execute>
+            </action> </item>
+            <item label="Virtual keyboard"> <action name="Execute">
+                <execute>dbus-send --print-reply --dest=org.Cinnamon /org/Cinnamon org.Cinnamon.ToggleKeyboard</execute>
+            </action> </item>
+            <item label="Weather"> <action name="Execute">
+                <execute>gapplication launch org.gnome.Weather</execute>
+            </action> </item>
+            <item label="Xcalc"> <action name="Execute">
+                <execute>xcalc</execute>
+            </action> </item>
+            <item label="Xman"> <action name="Execute">
+                <execute>xman</execute>
+            </action> </item>
+        </menu>
+        <separator/>
+        <menu id="40" label="OpenBox">
+            <menu id="client-list-menu"/>
+            <item label="Reconfigure"> <action name="Reconfigure"/> </item>
+            <separator/>
+            <item label="Exit"> <action name="Exit"/> </item>
+        </menu>
+    </menu>
+</openbox_menu>

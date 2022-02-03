@@ -1,0 +1,11 @@
+[Desktop Entry]
+Name=dmenu		
+GenericName=applauncher	
+Comment=dmenu	
+Exec=dmenu_run
+Terminal=false
+Type=Application
+StartupNotify=true
+MimeType=text/plain;
+Icon=start-here
+

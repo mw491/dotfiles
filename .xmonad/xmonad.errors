@@ -1,0 +1,7 @@
+
+xmonad.hs:369:1: warning: [-Wtabs]
+    Tab character found here, and in two further locations.
+    Please use spaces instead.
+    |
+369 |           -- , ("M-S-<Return>", spawn "dmenu_run -i -nf red -sb darkblue -p \"Run: \"") --Dmenu
+    | ^^^^^^^^
