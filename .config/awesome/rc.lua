@@ -310,7 +310,7 @@ awful.screen.connect_for_each_screen(function(s)
             wibox.container.margin(separator, dpi(2), dpi(8), dpi(4), dpi(4)),
             
             weather_widget({
-            	api_key='097a4e60b8f2c9edfac77a98cee62c9b',
+            	api_key='OPENWEATHERMAP API',
             	coordinates = {21.5424, 39.1980},
             	font_name = 'Carter One',
 				icons = 'VitalyGorbachev',
