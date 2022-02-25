@@ -75,9 +75,9 @@ keys = [
 
     ##### QTILE ######
     # Toggle between different layouts as defined below
-    Key([mod], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),
+    Key([mod, "control"], "f", lazy.window.toggle_fullscreen(), desc="Toggle fullscreen"),
     Key([mod], "space", lazy.next_layout(), desc="Toggle between layouts"),
-    Key([mod, "shift"], "c", lazy.window.kill(), desc="Kill focused window"),
+    Key([mod], "q", lazy.window.kill(), desc="Kill focused window"),
     Key([mod], "Tab", lazy.screen.next_group()),
     Key([mod, "shift" ], "Tab", lazy.screen.prev_group()),
     Key([mod, "shift"], "r", lazy.reload_config(), desc="Reload the config"),
@@ -85,19 +85,22 @@ keys = [
 
     ##### LAUNCHING PROGRAMS ######
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
-    Key([mod, "shift"], "Return", lazy.spawn("dmenu_run -nb '#1e1e1e' -sf '#aaaaaa' -sb '#333942' -fn 'mononoki Nerd Font'"),
+    # Key([mod, "shift"], "Return", lazy.spawn("dmenu_run -nb '#1e1e1e' -sf '#aaaaaa' -sb '#333942' -fn 'mononoki Nerd Font'"),
+        # desc="launch dmenu"),
+    Key([mod, "shift"], "Return",
+        lazy.spawn("dmenu_run -nb '#1e1e1e' -sf '#222222' -sb '#6691B7' -bw 3 -fn 'mononoki Nerd Font' -p 'Run: ' -c -g 3 -l 20"),
         desc="launch dmenu"),
-    Key([mod], "a", lazy.spawn("rofi -show drun")),
-    Key([mod], "p", lazy.spawn("rofi -show run")),
+    Key([mod], "p", lazy.spawn("dmenu_run -p 25 -nb '#1e1e1e' -sf '#222222' -sb '#6691B7' -fn 'mononoki Nerd Font' -p 'Run: '"),
+        desc="launch dmenu prompt"),
+    Key([mod], "a", lazy.spawn("rofi -show drun"), desc="launch rofi"),
     Key([mod], "b", lazy.spawn("brave"), desc="Launch Brave Browser"),
     Key([mod], "e", lazy.spawn("emacs"), desc="Launch Emacs"),
     # Key([mod], "c", lazy.spawn("alacritty -e nvim /home/mw/.config/qtile/config.py"), desc="Edit Config File"),
     Key([mod], "c", lazy.spawn("dm-confedit"), desc="Edit Config File"),
-    Key([mod], "d", lazy.spawn("nemo"), desc="Launch Nemo File Manager"),
+    Key([mod], "f", lazy.spawn("nemo"), desc="Launch Nemo File Manager"),
     Key([mod, "shift"], "t", lazy.spawn("telegram-desktop"), desc="Launch Telegram"),
     Key([mod, "shift"], "s", lazy.spawn("flameshot gui"), desc="Take a screenshot"),
     Key([mod], "n", lazy.spawn("neovide"), desc="open neovim(neovide)"),
-    #Key([mod], "s", os.system("/home/mw/.config/qtile/./show_keys.sh")),
     Key([mod, "control"], "k", lazy.spawn("dm-kill")),
     Key([mod, "control"], "x", lazy.spawn("xkill")),
     Key([mod], "x", lazy.spawn("arcolinux-logout"), desc="Turn off/Logout computer"),
@@ -123,7 +126,8 @@ groups = [
     Group("3", label="SYS"),
     Group("4", label="DOC"),
     Group("5", label="VBOX"),
-    Group("6", label="CHAT"),
+    Group("6", label="GAME"),
+    Group("7", label="CHAT"),
 ]
 
 for i in groups:
@@ -168,22 +172,23 @@ layouts = [
 
 decor = {
     "decorations": [
-        BorderDecoration(colour=["#6666ff", "#00000000", "#00000000", "#00000000", "#00000000", "#ff7777"])
+        BorderDecoration(colour=["#6666ffAA", "#00000000", "#00000000", "#00000000", "#00000000", "#ff7777AA"])
     ],
-    "padding": 12,
+    "padding": 8,
     "foreground": "#ffff77",
 }
 decor2 = {
     "decorations": [
-        BorderDecoration(colour=["#ffff77", "#00000000", "#00000000", "#00000000", "#00000000", "#77ff77"])
+        BorderDecoration(colour=["#ffff77AA", "#00000000", "#00000000", "#00000000", "#00000000", "#77ff77AA"])
     ],
-    "padding": 12,
+    "padding": 8,
     "foreground": "#7777ff",
 }
 
 widget_defaults = dict(
-    font="monospace",
-    fontsize=12,
+    # font="mononoki Nerd Font",
+    font = "ubuntu mono",
+    fontsize=13,
     padding=6
     #fontshadow="#555555"
 )
@@ -197,18 +202,19 @@ screens = [
                 widget.Image(
                        filename = "~/.config/qtile/python.png",
                        scale = "False",
-                       mouse_callbacks = {'Button1': lazy.spawn("alacritty")}
+                       mouse_callbacks = {'Button1': lazy.spawn("alacritty")},
                        ),
                 widget.Sep(
                        linewidth = 0,
                        padding = 6,
                        ),
                 widget.GroupBox(highlight_method="line", hide_unused=False, urgent_alert_method="block",
-                                inactive="#AAAAAA", highlight_color="#343955", padding=3),
+                                inactive="#AAAAAA", highlight_color=["#6691B722", "#6691B7CC"], padding=3, disable_drag=True,
+                                this_current_screen_border="#6691B7"),
                 widget.Chord(
                     name_transform=lambda name: name.upper(),
                     #background="#ff7777"
-                    background="#77ff77",
+                    background="#7777ff",
                     foreground="#222222"
                 ),
                 widget.WindowName(foreground="ff7777"),
@@ -217,11 +223,12 @@ screens = [
                     widget.Systray(),
                     ]
                 ),
-                widget.Sep(padding=8),
-                widget.WidgetBox(text_closed = "WTTR", widgets=[
-                widget.Wttr(format="%c%t", location={"Jeddah" : "Jeddah"}, **decor, #background="#6691B7",
-                       mouse_callbacks = {'Button1': lazy.spawn('alacritty -e python /home/mw/.config/qtile/wttr.py')}                       ),
-                ], **decor),
+
+                # widget.Sep(padding=8),
+                # widget.WidgetBox(text_closed = "WTTR", widgets=[
+                # widget.Wttr(format="%c%t", location={"Jeddah" : "Jeddah"}, **decor, #background="#6691B7",
+                #        mouse_callbacks = {'Button1': lazy.spawn('alacritty -e python /home/mw/.config/qtile/wttr.py')}                       ),
+                # ], **decor),
 
                 widget.Sep(padding=8),
                 widget.DF(format="{uf}{m}|{r:.0f}%",visible_on_warn=False, **decor2), ## background="#11AA11"
@@ -264,7 +271,7 @@ floating_layout = layout.Floating(
         Match(wm_class="ssh-askpass"),  # ssh-askpass
         Match(title="branchdialog"),  # gitk
         Match(title="pinentry"),  # GPG key password entry
-        Match(title="galculator"),  # GPG key password entry
+        Match(title="galculator"),  # Calculator
     ]
 )
 auto_fullscreen = True
