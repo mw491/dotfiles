@@ -35,7 +35,7 @@ from qtile_extras import widget
 from qtile_extras.widget.decorations import BorderDecoration
 
 mod = "mod4"
-terminal = guess_terminal()
+terminal = guess_terminal() + " -e fish"
 
 keys = [
 
@@ -201,20 +201,21 @@ screens = [
                 widget.Spacer(length=8),
                 widget.Image(
                        filename = "~/.config/qtile/python.png",
-                       scale = "False",
-                       mouse_callbacks = {'Button1': lazy.spawn("alacritty")},
+                       scale = "True",
+                       mouse_callbacks = {'Button1': lazy.spawn(terminal)},
+                       background = "#1D4652",
                        ),
                 widget.Sep(
                        linewidth = 0,
                        padding = 6,
                        ),
                 widget.GroupBox(highlight_method="line", hide_unused=False, urgent_alert_method="block",
-                                inactive="#AAAAAA", highlight_color=["#6691B722", "#6691B7CC"], padding=3, disable_drag=True,
+                                inactive="#AAAAAA", highlight_color="#32526E", padding=3, disable_drag=True,
                                 this_current_screen_border="#6691B7"),
                 widget.Chord(
                     name_transform=lambda name: name.upper(),
                     #background="#ff7777"
-                    background="#7777ff",
+                    background="#6691B7",
                     foreground="#222222"
                 ),
                 widget.WindowName(foreground="ff7777"),
@@ -231,20 +232,20 @@ screens = [
                 # ], **decor),
 
                 widget.Sep(padding=8),
-                widget.DF(format="{uf}{m}|{r:.0f}%",visible_on_warn=False, **decor2), ## background="#11AA11"
+                widget.DF(format=" {uf}{m}|{r:.0f}%",visible_on_warn=False, **decor2), ## background="#11AA11"
                 widget.Sep(padding=8),
-                widget.Memory(**decor), ## background="#ff7777"
+                widget.Memory(format=" MEM:{MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}", **decor), ## background="#ff7777"
                 widget.Sep(padding=8),
-                widget.CPU(format="CPU {load_percent}%", **decor2), ## background="#FF3300"
+                widget.CPU(format="﫭 CPU {load_percent}%", **decor2), ## background="#FF3300"
                 widget.Sep(padding=8),
-                widget.Clock(format="%d/%m/%Y | %a %I:%M %p", **decor), ## background="#6666ff"
+                widget.Clock(format=" %d/%m/%Y | %a %I:%M %p", **decor), ## background="#6666ff"
                 widget.Sep(padding=8),
                 widget.CurrentLayoutIcon(scale=0.66),
             ],
             24,
             # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
             # border_color=["ff00ff", "000000", "ff00ff", "000000"],  # Borders are magenta
-            background="#29292955"
+            background="#292929AA"
         ),
     ),
 ]

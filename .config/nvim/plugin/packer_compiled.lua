@@ -95,6 +95,11 @@ _G.packer_plugins = {
     path = "/home/mw/.local/share/nvim/site/pack/packer/start/bclose.vim",
     url = "https://github.com/rbgrouleff/bclose.vim"
   },
+  ["beacon.nvim"] = {
+    loaded = true,
+    path = "/home/mw/.local/share/nvim/site/pack/packer/start/beacon.nvim",
+    url = "https://github.com/danilamihailov/beacon.nvim"
+  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/home/mw/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -125,11 +130,6 @@ _G.packer_plugins = {
     path = "/home/mw/.local/share/nvim/site/pack/packer/start/cmp_luasnip",
     url = "https://github.com/saadparwaiz1/cmp_luasnip"
   },
-  colorschemes = {
-    loaded = true,
-    path = "/home/mw/.local/share/nvim/site/pack/packer/start/colorschemes",
-    url = "https://github.com/lunarvim/colorschemes"
-  },
   ["friendly-snippets"] = {
     loaded = true,
     path = "/home/mw/.local/share/nvim/site/pack/packer/start/friendly-snippets",
@@ -139,6 +139,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mw/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
+  },
+  gruvbox = {
+    loaded = true,
+    path = "/home/mw/.local/share/nvim/site/pack/packer/start/gruvbox",
+    url = "https://github.com/morhetz/gruvbox"
   },
   ["indent-blankline.nvim"] = {
     loaded = true,
@@ -200,16 +205,6 @@ _G.packer_plugins = {
     path = "/home/mw/.local/share/nvim/site/pack/packer/start/nvim-web-devicons",
     url = "https://github.com/kyazdani42/nvim-web-devicons"
   },
-  ["onedark.nvim"] = {
-    loaded = true,
-    path = "/home/mw/.local/share/nvim/site/pack/packer/start/onedark.nvim",
-    url = "https://github.com/lukas-reineke/onedark.nvim"
-  },
-  onehalf = {
-    loaded = true,
-    path = "/home/mw/.local/share/nvim/site/pack/packer/start/onehalf",
-    url = "https://github.com/sonph/onehalf"
-  },
   ["packer.nvim"] = {
     loaded = true,
     path = "/home/mw/.local/share/nvim/site/pack/packer/start/packer.nvim",
@@ -229,11 +224,6 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mw/.local/share/nvim/site/pack/packer/start/popup.nvim",
     url = "https://github.com/nvim-lua/popup.nvim"
-  },
-  ["project.nvim"] = {
-    loaded = true,
-    path = "/home/mw/.local/share/nvim/site/pack/packer/start/project.nvim",
-    url = "https://github.com/ahmedkhalf/project.nvim"
   },
   ["ranger.vim"] = {
     loaded = true,

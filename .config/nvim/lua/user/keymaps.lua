@@ -38,7 +38,6 @@ keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<C-w>", ":Bdelete<CR>", opts) -- Close buffer with CTRL-W
 
 -- LEADER KEY --
-keymap("n", "<leader>d", ":NvimTreeToggle<cr>", opts)
 -- source
 keymap("n", "<leader>sw", ":w | so <CR>", opts) -- write and source
 -- save file
@@ -54,6 +53,8 @@ keymap("n", "<leader>co", ":Telescope colorscheme theme=dropdown <CR>", opts) --
 
 -- files
 -- keymap("n", "<leader>ff", ":<CR>", opts) -- find files
+keymap("n", "<leader>ff", ":NvimTreeToggle<cr>", opts)
+keymap("n", "<leader>f", ":Vifm<cr>", opts)
 keymap("n", "<leader>fi", ":Telescope find_files hidden=true previewer=false theme=dropdown<CR>", opts) -- find files
 keymap("n", "<leader>fo", ":Telescope oldfiles hidden=true previewer=false theme=dropdown<CR>", opts) -- old files
 

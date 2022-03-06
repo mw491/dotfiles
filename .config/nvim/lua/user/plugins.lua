@@ -50,7 +50,7 @@ return packer.startup(function(use)
   use 'kyazdani42/nvim-tree.lua' -- Nvim Tree - file explorer
   use "akinsho/bufferline.nvim"
   use "moll/vim-bbye"
-  use 'liuchengxu/vim-which-key'
+  -- use 'liuchengxu/vim-which-key'
   use {
       'goolord/alpha-nvim',
       requires = { 'kyazdani42/nvim-web-devicons' },
@@ -58,15 +58,15 @@ return packer.startup(function(use)
           require'alpha'.setup(require'alpha.themes.startify'.config)
       end
   }
-  use "ahmedkhalf/project.nvim"
 
   -- colorscheme
-  use "lunarvim/colorschemes"
-  use "sonph/onehalf"
-  use "lukas-reineke/onedark.nvim"
+  -- use "lunarvim/colorschemes"
+  -- use "sonph/onehalf"
+  -- use "lukas-reineke/onedark.nvim"
   use "ayu-theme/ayu-vim"
   use 'norcalli/nvim-colorizer.lua'
   use 'DougBeney/pickachu'
+  use 'morhetz/gruvbox'
 
 -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin
