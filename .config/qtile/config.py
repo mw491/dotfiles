@@ -121,13 +121,13 @@ keys = [
 # groups = [Group(i) for i in "123456789"]
 
 groups = [
-    Group("1", label="DEV"),
-    Group("2", label="WWW"),
-    Group("3", label="SYS"),
-    Group("4", label="DOC"),
-    Group("5", label="VBOX"),
-    Group("6", label="GAME"),
-    Group("7", label="CHAT"),
+    Group("1", label="dev"),
+    Group("2", label="www"),
+    Group("3", label="sys"),
+    Group("4", label="doc"),
+    Group("5", label="vbox"),
+    Group("6", label="game"),
+    Group("7", label="chat"),
 ]
 
 for i in groups:
@@ -165,32 +165,39 @@ layouts = [
     # layout.MonadWide(margin=8),
     # layout.RatioTile(),
     # layout.Tile(),
-    # layout.TreeTab(),
+    layout.TreeTab(bg_color="#292929AA", active_bg="#ff7777"),
     # layout.VerticalTile(),
     # layout.Zoomy(),
 ]
 
 decor = {
-    "decorations": [
-        BorderDecoration(colour=["#6666ffAA", "#00000000", "#00000000", "#00000000", "#00000000", "#ff7777AA"])
-    ],
-    "padding": 8,
-    "foreground": "#ffff77",
+    # "decorations": [
+    #     BorderDecoration(colour=["#6666ffAA", "#00000000", "#00000000", "#00000000", "#00000000", "#ff7777AA"])
+    # ],
+    # "padding": 8,
+    # "foreground": "#ffff77",
 }
 decor2 = {
-    "decorations": [
-        BorderDecoration(colour=["#ffff77AA", "#00000000", "#00000000", "#00000000", "#00000000", "#77ff77AA"])
-    ],
-    "padding": 8,
-    "foreground": "#7777ff",
+    # "decorations": [
+    #     BorderDecoration(colour=["#ffff77AA", "#00000000", "#00000000", "#00000000", "#00000000", "#77ff77AA"])
+    # ],
+    # "padding": 8,
+    # "foreground": "#7777ff",
 }
 
+colours = [
+    "#8FBCBB",
+    "#A3BE8C",
+    "#81A1C1",
+    "#EBCB8B",
+    "#88C0D0"
+]
+
 widget_defaults = dict(
-    # font="mononoki Nerd Font",
     font = "ubuntu mono",
     fontsize=13,
-    padding=6
-    #fontshadow="#555555"
+    padding=4,
+    fontshadow="#181818"
 )
 extension_defaults = widget_defaults.copy()
 
@@ -200,52 +207,72 @@ screens = [
             [
                 widget.Spacer(length=8),
                 widget.Image(
-                       filename = "~/.config/qtile/python.png",
+                       filename = "~/.config/qtile/python-white.png",
                        scale = "True",
                        mouse_callbacks = {'Button1': lazy.spawn(terminal)},
-                       background = "#1D4652",
+                       background = "#292929",
                        ),
-                widget.Sep(
-                       linewidth = 0,
-                       padding = 6,
-                       ),
+                widget.Spacer(length=8),
                 widget.GroupBox(highlight_method="line", hide_unused=False, urgent_alert_method="block",
-                                inactive="#AAAAAA", highlight_color="#32526E", padding=3, disable_drag=True,
-                                this_current_screen_border="#6691B7"),
+                                inactive="#AAAAAA", highlight_color="#3E465788", padding=4, disable_drag=True,
+                                this_current_screen_border="#3E4657", font="ubuntu mono"),
                 widget.Chord(
                     name_transform=lambda name: name.upper(),
                     #background="#ff7777"
-                    background="#6691B7",
-                    foreground="#222222"
+                    background="#6691B700",
+                    fontshadow=None,
+                    padding=8,
+                    # foreground="#222222"
                 ),
                 widget.WindowName(foreground="ff7777"),
 
+                widget.Sep(
+                       linewidth = 0,
+                       padding = 10,
+                       ),
+                # widget.WindowCount(),
+                widget.Sep(
+                       linewidth = 0,
+                       padding = 10,
+                       ),
+                # widget.TaskList(highlight_method="block", icon_size=0, margin=-5,
+                #                 padding=8, spacing=3, txt_floating="🗗 ", fontsize=15, font="ubuntu mono"),
+                #
                 widget.WidgetBox(widgets=[
-                    widget.Systray(),
+                    widget.Sep(
+                       linewidth = 0,
+                       padding = 8,
+                       ),
+                    widget.Systray(background="#00000000"),
+                    widget.Sep(
+                       linewidth = 0,
+                       padding = 8,
+                       ),
                     ]
                 ),
 
-                # widget.Sep(padding=8),
-                # widget.WidgetBox(text_closed = "WTTR", widgets=[
-                # widget.Wttr(format="%c%t", location={"Jeddah" : "Jeddah"}, **decor, #background="#6691B7",
-                #        mouse_callbacks = {'Button1': lazy.spawn('alacritty -e python /home/mw/.config/qtile/wttr.py')}                       ),
-                # ], **decor),
+                widget.Sep(padding=16, size_percent=60),
+                widget.Wttr(format="%c%t", location={"Jeddah" : "Jeddah"}, foreground=colours[0], **decor, #background="#6691B7",
+                       mouse_callbacks = {'Button1': lazy.spawn('alacritty -e python /home/mw/.config/qtile/wttr.py')}                       ),
 
-                widget.Sep(padding=8),
-                widget.DF(format=" {uf}{m}|{r:.0f}%",visible_on_warn=False, **decor2), ## background="#11AA11"
-                widget.Sep(padding=8),
-                widget.Memory(format=" MEM:{MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}", **decor), ## background="#ff7777"
-                widget.Sep(padding=8),
-                widget.CPU(format="﫭 CPU {load_percent}%", **decor2), ## background="#FF3300"
-                widget.Sep(padding=8),
-                widget.Clock(format=" %d/%m/%Y | %a %I:%M %p", **decor), ## background="#6666ff"
-                widget.Sep(padding=8),
+                widget.Sep(padding=16, size_percent=60),
+                widget.DF(format=" {uf}{m}|{r:.0f}%",visible_on_warn=False, **decor2, foreground=colours[1]), ## background="#11AA11"
+                widget.Sep(padding=16, size_percent=60),
+                widget.Memory(format=" MEM:{MemUsed: .0f}{mm}/{MemTotal: .0f}{mm}", **decor, foreground=colours[2]), ## background="#ff7777"
+                widget.Sep(padding=16, size_percent=60),
+                widget.CPU(format="﫭 CPU {load_percent}%", **decor2, foreground=colours[3]), ## background="#FF3300"
+                widget.Sep(padding=8, size_percent=60),
+                widget.CPUGraph(graph_color=colours[3], type="box", border_width=0, **decor2),
+                widget.Sep(padding=16, size_percent=60),
+                widget.Clock(format=" %d/%m/%Y | %a %I:%M %p", **decor, foreground=colours[4]), ## background="#6666ff"
+                widget.Sep(padding=16, size_percent=60),
                 widget.CurrentLayoutIcon(scale=0.66),
             ],
-            24,
-            # border_width=[2, 0, 2, 0],  # Draw top and bottom borders
-            # border_color=["ff00ff", "000000", "ff00ff", "000000"],  # Borders are magenta
-            background="#292929AA"
+            22,
+            border_width=[4, 4, 4, 4],  # Draw top and bottom borders
+            border_color=["ff00ff00", "00000000", "ff00ff00", "00000000"],  # Borders are magenta
+            background="#292929CC"
+            # background='#2E3440FE'
         ),
     ),
 ]
