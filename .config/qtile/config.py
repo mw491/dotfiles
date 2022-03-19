@@ -87,10 +87,13 @@ keys = [
     Key([mod], "Return", lazy.spawn(terminal), desc="Launch terminal"),
     # Key([mod, "shift"], "Return", lazy.spawn("dmenu_run -nb '#1e1e1e' -sf '#aaaaaa' -sb '#333942' -fn 'mononoki Nerd Font'"),
         # desc="launch dmenu"),
+    # Key([mod, "shift"], "Return",
+    #     lazy.spawn("dmenu_run -nb '#1e1e1e' -sf '#222222' -sb '#555555' -bw 3 -fn 'mononoki Nerd Font' -p 'Run: ' -c -g 3 -l 20"),
+    #     desc="launch dmenu"),
     Key([mod, "shift"], "Return",
-        lazy.spawn("dmenu_run -nb '#1e1e1e' -sf '#222222' -sb '#6691B7' -bw 3 -fn 'mononoki Nerd Font' -p 'Run: ' -c -g 3 -l 20"),
-        desc="launch dmenu"),
-    Key([mod], "p", lazy.spawn("dmenu_run -p 25 -nb '#1e1e1e' -sf '#222222' -sb '#6691B7' -fn 'mononoki Nerd Font' -p 'Run: '"),
+        lazy.spawn("dmenu_run -nf '#d8dee9' -nb '#1d1f21' -sf '#8FBCBB' -sb '#2E3440' -shb '#4C566A' -shf '#81A1C1' -nhf '#81A1C1' -nhb '#2E3440' -fn 'mononoki Nerd Font' -p 'Run: ' -g 7 -l 10 -h 30"),
+        desc="launch dmenu run"),
+    Key([mod], "p", lazy.spawn("dm-run"),
         desc="launch dmenu prompt"),
     Key([mod], "a", lazy.spawn("rofi -show drun"), desc="launch rofi"),
     Key([mod], "b", lazy.spawn("brave"), desc="Launch Brave Browser"),
@@ -126,8 +129,8 @@ groups = [
     Group("3", label="sys"),
     Group("4", label="doc"),
     Group("5", label="vbox"),
-    Group("6", label="game"),
-    Group("7", label="chat"),
+    Group("6", label="chat"),
+    Group("7", label="edit"),
 ]
 
 for i in groups:
@@ -165,7 +168,7 @@ layouts = [
     # layout.MonadWide(margin=8),
     # layout.RatioTile(),
     # layout.Tile(),
-    layout.TreeTab(bg_color="#292929AA", active_bg="#ff7777"),
+    # layout.TreeTab(bg_color="#292929AA", active_bg="#ff7777"),
     # layout.VerticalTile(),
     # layout.Zoomy(),
 ]
@@ -209,13 +212,13 @@ screens = [
                 widget.Image(
                        filename = "~/.config/qtile/python-white.png",
                        scale = "True",
-                       mouse_callbacks = {'Button1': lazy.spawn(terminal)},
+                       mouse_callbacks = {'Button1': lazy.spawn("jgmenu_run")},
                        background = "#292929",
                        ),
                 widget.Spacer(length=8),
                 widget.GroupBox(highlight_method="line", hide_unused=False, urgent_alert_method="block",
                                 inactive="#AAAAAA", highlight_color="#3E465788", padding=4, disable_drag=True,
-                                this_current_screen_border="#3E4657", font="ubuntu mono"),
+                                this_current_screen_border="#3E4657", font="ubuntu mono", rounded=True),
                 widget.Chord(
                     name_transform=lambda name: name.upper(),
                     #background="#ff7777"
@@ -243,7 +246,7 @@ screens = [
                        linewidth = 0,
                        padding = 8,
                        ),
-                    widget.Systray(background="#00000000"),
+                    widget.Systray(),
                     widget.Sep(
                        linewidth = 0,
                        padding = 8,
@@ -271,8 +274,8 @@ screens = [
             22,
             border_width=[4, 4, 4, 4],  # Draw top and bottom borders
             border_color=["ff00ff00", "00000000", "ff00ff00", "00000000"],  # Borders are magenta
-            background="#292929CC"
-            # background='#2E3440FE'
+            # background="#292929CC"
+            background='#262C37CC'
         ),
     ),
 ]

@@ -66,7 +66,7 @@ return packer.startup(function(use)
   use "ayu-theme/ayu-vim"
   use 'norcalli/nvim-colorizer.lua'
   use 'DougBeney/pickachu'
-  use 'morhetz/gruvbox'
+  use 'arcticicestudio/nord-vim'
 
 -- cmp plugins
   use "hrsh7th/nvim-cmp" -- The completion plugin

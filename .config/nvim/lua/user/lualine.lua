@@ -8,7 +8,8 @@ local lualine = require('lualine')
 -- stylua: ignore
 local colors = {
   -- bg       = '#202328',
-  bg       = '#1B2029',
+  -- bg       = '#1B2029',
+  bg       = '#282E3B',
   fg       = '#bbc2cf',
   yellow   = '#ECBE7B',
   cyan     = '#008080',
@@ -18,7 +19,8 @@ local colors = {
   violet   = '#a9a1e1',
   magenta  = '#c678dd',
   blue     = '#51afef',
-  red      = '#ec5f67',
+  -- red      = '#ec5f67',
+  red      = '#BF616A',
 }
 
 local conditions = {
@@ -41,14 +43,14 @@ local config = {
     -- Disable sections and component separators
     component_separators = '',
     section_separators = '',
-    theme = {
       -- We are going to use lualine_c an lualine_x as left and
+    theme = {
       -- right section. Both are highlighted by c theme .  So we
       -- are just setting default looks o statusline
       normal = { c = { fg = colors.fg, bg = colors.bg } },
       inactive = { c = { fg = colors.fg, bg = colors.bg } },
     },
-    -- theme = "ayu_mirage"
+    -- theme = "nord"
   },
   sections = {
     -- these are to remove the defaults

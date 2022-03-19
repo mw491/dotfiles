@@ -95,11 +95,6 @@ _G.packer_plugins = {
     path = "/home/mw/.local/share/nvim/site/pack/packer/start/bclose.vim",
     url = "https://github.com/rbgrouleff/bclose.vim"
   },
-  ["beacon.nvim"] = {
-    loaded = true,
-    path = "/home/mw/.local/share/nvim/site/pack/packer/start/beacon.nvim",
-    url = "https://github.com/danilamihailov/beacon.nvim"
-  },
   ["bufferline.nvim"] = {
     loaded = true,
     path = "/home/mw/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
@@ -140,11 +135,6 @@ _G.packer_plugins = {
     path = "/home/mw/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
-  gruvbox = {
-    loaded = true,
-    path = "/home/mw/.local/share/nvim/site/pack/packer/start/gruvbox",
-    url = "https://github.com/morhetz/gruvbox"
-  },
   ["indent-blankline.nvim"] = {
     loaded = true,
     path = "/home/mw/.local/share/nvim/site/pack/packer/start/indent-blankline.nvim",
@@ -154,6 +144,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/mw/.local/share/nvim/site/pack/packer/start/lualine.nvim",
     url = "https://github.com/nvim-lualine/lualine.nvim"
+  },
+  ["nord-vim"] = {
+    loaded = true,
+    path = "/home/mw/.local/share/nvim/site/pack/packer/start/nord-vim",
+    url = "https://github.com/arcticicestudio/nord-vim"
   },
   ["nvim-autopairs"] = {
     loaded = true,
@@ -255,10 +250,10 @@ _G.packer_plugins = {
     path = "/home/mw/.local/share/nvim/site/pack/packer/start/vim-bbye",
     url = "https://github.com/moll/vim-bbye"
   },
-  ["vim-which-key"] = {
+  ["vim-plugin"] = {
     loaded = true,
-    path = "/home/mw/.local/share/nvim/site/pack/packer/start/vim-which-key",
-    url = "https://github.com/liuchengxu/vim-which-key"
+    path = "/home/mw/.local/share/nvim/site/pack/packer/start/vim-plugin",
+    url = "https://github.com/kiteco/vim-plugin"
   }
 }
 

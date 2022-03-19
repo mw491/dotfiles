@@ -32,6 +32,7 @@ local options = {
   wrap = false, -- display lines as one long line
   scrolloff = 8, -- is one of my fav
   sidescrolloff = 8,
+  guicursor = "n-cr-o:hor20,v-r-c-sm:block,i-ci-ve:ver25",
   guifont = "JetBrains Mono:h11", -- the font used in graphical neovim applications
 }
 
@@ -47,6 +48,4 @@ vim.cmd [[set formatoptions-=cro]] -- TODO: this doesn't seem to work
 
 vim.cmd "let g:ayucolor='dark'"
 vim.cmd "let g:ranger_command_override = 'ranger --cmd \"set show_hidden=true\"'"
-vim.cmd "let g:which_key_centered = 0"
-vim.cmd "let g:gruvbox_contrast_dark = 'hard'"
-vim.cmd "let g:beacon_minimal_jump = 1"
+vim.cmd "let g:kite_supported_languages = ['*']"
