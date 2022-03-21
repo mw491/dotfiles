@@ -22,6 +22,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'frazrepo/vim-rainbow'
     Plug 'mhinz/vim-startify'
     Plug 'mengelbrecht/lightline-bufferline'
+    Plug 'https://github.com/wincent/terminus'
 "{{ File management }}
     Plug 'vifm/vifm.vim'                               " Vifm
     Plug 'scrooloose/nerdtree'                         " Nerdtree
@@ -34,6 +35,7 @@ call plug#begin('~/.vim/plugged')
     Plug 'kovetskiy/sxhkd-vim'                         " sxhkd highlighting
     Plug 'vim-python/python-syntax'                    " Python highlighting
     Plug 'ap/vim-css-color'                            " Color previews for CSS
+    Plug 'arcticicestudio/nord-vim'
 "{{ Junegunn Choi Plugins }}
     Plug 'junegunn/goyo.vim'                           " Distraction-free viewing
     Plug 'junegunn/limelight.vim'                      " Hyperfocus on a range
@@ -77,16 +79,21 @@ let g:rehash256 = 1
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Status Line
+" \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
+" \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " The lightline.vim theme
 let g:lightline = {
-      \ 'colorscheme': 'Tomorrow_Night',
+      \ 'colorscheme': 'nord',
       \ 'separator': { 'left': "\ue0b0", 'right': "\ue0b2" },
       \ 'subseparator': { 'left': "\ue0b1", 'right': "\ue0b3" }
       \ }
 
 set showtabline=2
 set background=dark
+set termguicolors
+set guicursor="n-cr-o:hor20-Cursor,v-r-c-sm:block-Cursor,i-ci-ve:ver25-Cursor",
+
 " Always show statusline
 set laststatus=2
 
@@ -115,6 +122,11 @@ let NERDTreeShowLineNumbers=1
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI = 1
 let g:NERDTreeWinSize=38
+
+
+let g:TerminusNormalCursorShape=2
+let g:TerminusInsertCursorShape=1
+let g:TerminusReplaceCursorShape=0
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Colors and Theming
@@ -232,3 +244,6 @@ set guioptions-=m  "remove menu bar
 set guioptions-=T  "remove toolbar
 set guioptions-=r  "remove right-hand scroll bar
 set guioptions-=L  "remove left-hand scroll bar
+
+colorscheme nord
+set cursorline
