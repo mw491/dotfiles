@@ -8,6 +8,7 @@
 #
 # Logo key. Use Mod1 for Alt.
 set $mod Mod4
+set $mod1 Mod1
 # Home row direction keys, like vim
 set $left h
 set $down j
@@ -28,12 +29,17 @@ set $menu exec $term --class=launcher -e sway-launcher-desktop
 # Appearance
 default_border pixel 3
 gaps inner 10
-gaps outer 3
+gaps outer 0
+
+client.focused          #FF7777 #FF7777 #000000 #B7C2D7
 
 ### Output configuration
 #
 # Default wallpaper (more resolutions are available in /usr/share/backgrounds/sway/)
-output * bg $HOME/dtwallpapers/0016.jpg fill
+# output * bg $HOME/dtwallpapers/0137.jpg fill
+# output * bg $HOME/dtwallpapers/0259.jpg fill
+# output * bg $HOME/dtwallpapers/0188.jpg fill
+output * bg $HOME/Pictures/nordwindow.png fill
 #
 # Example configuration:
 #
@@ -45,10 +51,11 @@ output * bg $HOME/dtwallpapers/0016.jpg fill
 #
 # Example configuration:
 #
-# exec swayidle -w \
-#          timeout 300 'swaylock -f -c 000000' \
-#          timeout 600 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' \
-#          before-sleep 'swaylock -f -c 000000'
+exec swayidle -w \
+	timeout 600 'swaylock -f -c 000000' \
+	timeout 900 'swaymsg "output * dpms off"' \
+		resume 'swaymsg "output * dpms on"' \
+	before-sleep 'swaylock -f -c 000000'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -74,6 +81,9 @@ output * bg $HOME/dtwallpapers/0016.jpg fill
 #
     # Start a terminal
     bindsym $mod+Return exec $term
+
+    # Start rofi
+    bindsym --release Super_L exec (pgrep "rofi" 1>/dev/null 2>&1 && killall rofi ) || ~/.config/rofi/archcraft/launcher
 
     # Kill focused window
     bindsym $mod+q kill

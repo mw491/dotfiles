@@ -1,4 +1,0 @@
-#!/bin/bash
-
-~/.local/bin/stacki3 &
-/sbin/swaync &
