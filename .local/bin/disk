@@ -1,0 +1,6 @@
+#!/bin/bash
+USE=$(df -hl | grep '/dev/sda1' | sed -n 1p | awk '{print $5}')
+AVAIL=$(df -hl | grep '/dev/sda1' | sed -n 1p | awk '{print $4}')
+# SIZE=$(df -hl | grep '/dev/sda1' | sed -n 1p | awk '{print $2}')
+
+echo " $AVAIL | $USE"

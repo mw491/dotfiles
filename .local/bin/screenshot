@@ -1,0 +1,12 @@
+#!/bin/bash
+
+chosen=$(printf "Active Window\nScreen\nOutput\nArea\nWindow" | rofi -dmenu -i -theme-str '@theme "/home/mw/.local/share/rofi/themes/rofi-collection/nord/nord-dmenu.rasi"')
+
+case "$chosen" in
+	"Active Window") shotman active ;;
+	"Screen") shotman screen ;;
+	"Output") shotman output ;;
+	"Area") shotman area ;;
+	"Window") shotman window ;;
+	*) exit 1 ;;
+esac

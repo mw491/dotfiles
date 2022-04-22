@@ -1,0 +1,6 @@
+#!/bin/bash
+
+while true; do
+  xsetroot -name "[ﮮ $(pacupdate)] [ $(disk)] [﫭 $(memory)] [ $(cpu)] [ $(clock)] |"
+  sleep 5s
+done &

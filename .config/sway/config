@@ -52,10 +52,12 @@ output * bg $HOME/Pictures/nordwindow.png fill
 # Example configuration:
 #
 exec swayidle -w \
-	timeout 600 'swaylock -f -c 000000' \
-	timeout 900 'swaymsg "output * dpms off"' \
-		resume 'swaymsg "output * dpms on"' \
+	timeout 600 'swaylock -f -c 2E3440' \
+	timeout 660 'swaymsg "output * dpms off"' \
+	timeout 1500 'systemctl suspend' \
+	resume 'swaymsg "output * dpms on"' \
 	before-sleep 'swaylock -f -c 000000'
+
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -83,7 +85,7 @@ exec swayidle -w \
     bindsym $mod+Return exec $term
 
     # Start rofi
-    bindsym --release Super_L exec (pgrep "rofi" 1>/dev/null 2>&1 && killall rofi ) || ~/.config/rofi/archcraft/launcher
+    bindsym --release Super_L exec (pgrep "rofi" 1>/dev/null 2>&1 && killall rofi ) || rofi -show drun
 
     # Kill focused window
     bindsym $mod+q kill
@@ -108,7 +110,7 @@ exec swayidle -w \
     bindsym $mod+Shift+q exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
     # Logout
-    bindsym $mod+x exec dm-logout
+    bindsym $mod+x exec rofi -show power-menu -modi "power-menu:rofi-power-menu --choices=shutdown/reboot/suspend/logout/lockscreen" -theme-str '@theme "/home/mw/.local/share/rofi/themes/rofi-collection/nord/nord-dmenu.rasi"'
     
 # Moving around:
 #
@@ -207,6 +209,7 @@ exec swayidle -w \
     bindsym $mod+e exec emacs
     bindsym $mod+c exec dm-confedit
     bindsym $mod+a exec rofi -show drun
+    bindsym $mod+Shift+s exec ~/.local/bin/screenshot
 
 #
 # Resizing containers:
