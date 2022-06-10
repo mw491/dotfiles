@@ -1,0 +1,8 @@
+/* Dracula colorscheme */
+* {
+  bg: #2E3440;
+  fg: #f8f8f277;
+  fg-solid: #000000;
+  red: #ff6666;
+  red-alt: #ff666615;
+}

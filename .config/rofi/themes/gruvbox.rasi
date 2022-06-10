@@ -1,0 +1,8 @@
+/* Gruvbox colorscheme */
+* {
+  bg: #282828;
+  fg: #888888;
+  fg-solid: #000000;
+  red: #fb4934;
+  red-alt: #cc241d15;
+}

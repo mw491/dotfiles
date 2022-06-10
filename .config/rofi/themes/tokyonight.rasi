@@ -1,0 +1,8 @@
+/* tokyonight colorscheme */
+* {
+  bg: #24283b;
+  fg: #c0caf5AA;
+  fg-solid: #000000;
+  red: #f7768e;
+  red-alt: #f7768e15;
+}

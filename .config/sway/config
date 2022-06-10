@@ -1,8 +1,10 @@
-# Default config for sway
-#
-# Copy this to ~/.config/sway/config and edit it to your liking.
-#
 # Read `man 5 sway` for a complete reference.
+
+# faster key repeat
+input type:keyboard {
+    repeat_rate 70
+    repeat_delay 400
+}
 
 ### Variables
 #
@@ -15,7 +17,7 @@ set $down j
 set $up k
 set $right l
 # Your preferred terminal emulator
-set $term alacritty
+set $term kitty
 # Your preferred application launcher
 # Note: pass the final command to swaymsg so that the resulting window can be opened
 # on the original workspace that the command was run on.
@@ -24,12 +26,12 @@ set $term alacritty
 #set $menu dmenu_run -nf '#d8dee9' -nb '#1d1f21' -sf '#8FBCBB' -sb '#2E3440' -shb '#4C566A' -shf '#81A1C1' -nhf '#81A1C1' -nhb '#2E3440' -fn 'mononoki Nerd Font' -p 'Run: ' -g 7 -l 10 -h 30
 
 for_window [app_id="^launcher$"] floating enable, sticky enable, resize set 30 ppt 80 ppt, border pixel 7
-set $menu exec $term --class=launcher -e sway-launcher-desktop
+# set $menu exec $term --class=launcher -e sway-launcher-desktop
+set $menu exec rofi -show run -theme-str 'element { children: [element-text]; }' -disable-history
 
 # Appearance
-default_border pixel 3
-gaps inner 10
-gaps outer 0
+default_border pixel 2
+gaps inner 6
 
 client.focused          #FF7777 #FF7777 #000000 #B7C2D7
 
@@ -39,7 +41,12 @@ client.focused          #FF7777 #FF7777 #000000 #B7C2D7
 # output * bg $HOME/dtwallpapers/0137.jpg fill
 # output * bg $HOME/dtwallpapers/0259.jpg fill
 # output * bg $HOME/dtwallpapers/0188.jpg fill
-output * bg $HOME/Pictures/nordwindow.png fill
+# output * bg $HOME/Pictures/nordwindow.png fill
+# output * bg $HOME/Pictures/archlinux-gruvbox.png fill
+# output * bg $HOME/Pictures/northernlights.jpg fill
+output * bg $HOME/.config/sway/wallpapers/go-gopher.png fill
+# exec_always setwall random ~/.config/sway/wallpapers/ -c sway -o VGA-1
+
 #
 # Example configuration:
 #
@@ -51,13 +58,12 @@ output * bg $HOME/Pictures/nordwindow.png fill
 #
 # Example configuration:
 #
-exec swayidle -w \
-	timeout 600 'swaylock -f -c 2E3440' \
-	timeout 660 'swaymsg "output * dpms off"' \
-	timeout 1500 'systemctl suspend' \
-	resume 'swaymsg "output * dpms on"' \
-	before-sleep 'swaylock -f -c 000000'
-
+# exec swayidle -w \
+# 	timeout 600 'swaymsg "output * dpms off"' \
+# 	resume 'swaymsg "output * dpms on"' \
+# 	timeout 1500 'systemctl suspend' \
+# 	resume 'swaymsg "output * dpms on"'
+exec swayidle timeout 900 'swaymsg "output * dpms off"' resume 'swaymsg "output * dpms on"' timeout 1800 'systemctl suspend'
 #
 # This will lock your screen after 300 seconds of inactivity, then turn off
 # your displays after another 300 seconds, and turn your screens back on when
@@ -83,6 +89,7 @@ exec swayidle -w \
 #
     # Start a terminal
     bindsym $mod+Return exec $term
+    bindsym $mod1+Return exec $term -e zsh
 
     # Start rofi
     bindsym --release Super_L exec (pgrep "rofi" 1>/dev/null 2>&1 && killall rofi ) || rofi -show drun
@@ -94,7 +101,8 @@ exec swayidle -w \
     bindsym $mod+Shift+Return exec $menu
 
     # Toggle control center
-    bindsym $mod+Shift+n exec swaync-client -t -sw
+    # bindsym $mod+Shift+n exec swaync-client -t -sw
+    bindsym $mod+Shift+n exec dunstctl history-pop
 
     # Drag floating windows by holding down $mod and left mouse button.
     # Resize them with right mouse button + $mod.
@@ -110,7 +118,7 @@ exec swayidle -w \
     bindsym $mod+Shift+q exec swaynag -t warning -m 'You pressed the exit shortcut. Do you really want to exit sway? This will end your Wayland session.' -B 'Yes, exit sway' 'swaymsg exit'
 
     # Logout
-    bindsym $mod+x exec rofi -show power-menu -modi "power-menu:rofi-power-menu --choices=shutdown/reboot/suspend/logout/lockscreen" -theme-str '@theme "/home/mw/.local/share/rofi/themes/rofi-collection/nord/nord-dmenu.rasi"'
+    bindsym $mod+x exec ~/.local/bin/powermenu
     
 # Moving around:
 #
@@ -162,6 +170,12 @@ exec swayidle -w \
     bindsym $mod+Shift+0 move container to workspace number 10
     # Note: workspaces can have any name you want, not just numbers.
     # We just use 1-10 as the default.
+
+
+    bindsym $mod+tab workspace next_on_output 
+    bindsym $mod+Shift+tab workspace prev_on_output 
+    bindsym $mod1+tab exec swaymsg [con_id=$(swaymsg -t get_tree | ~/.config/sway/alttab t)] focus
+    bindsym $mod1+shift+tab exec swaymsg [con_id=$(swaymsg -t get_tree | ~/.config/sway/alttab f)] focus
 #
 # Layout stuff:
 #
@@ -202,14 +216,16 @@ exec swayidle -w \
 #
 # Opening apps:
 #
-    bindsym $mod+f exec nemo
+    bindsym $mod+f exec nautilus
     bindsym $mod+n exec neovide
-    bindsym $mod+b exec brave
+    bindsym $mod+b exec firefox
     bindsym $mod+t exec telegram-desktop
-    bindsym $mod+e exec emacs
+    bindsym $mod+e exec emacsclient -c -a 'emacs'
     bindsym $mod+c exec dm-confedit
+    bindsym $mod+Shift+x exec codium
     bindsym $mod+a exec rofi -show drun
     bindsym $mod+Shift+s exec ~/.local/bin/screenshot
+    bindsym $mod+w exec setwall random ~/.config/sway/wallpapers/ -c sway -o VGA-1
 
 #
 # Resizing containers:
@@ -257,9 +273,12 @@ bindsym $mod+r mode "resize"
 include /etc/sway/config.d/*
 
 # Autostart
-exec swaync &
+exec dunst &
 exec ~/.local/bin/stacki3 &
 exec nm-applet --indicator
 exec /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
+exec mpv ~/Music/startup.m4a
 exec_always pkill waybar &
 exec_always sleep 2 && waybar &
+exec_always /usr/bin/emacs --daemon
+# exec_always ~/.local/bin/setwallpapers

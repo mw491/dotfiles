@@ -5,9 +5,9 @@
     // "width": 1280, // Waybar width
     "spacing": 4, // Gaps between modules (4px)
     // Choose the order of the modules
-    "modules-left": ["sway/workspaces", "sway/mode", "sway/window"],
+    "modules-left": ["custom/launcher", "sway/workspaces", "sway/mode", "sway/window"],
     "modules-center": [],
-    "modules-right": ["pulseaudio", "cpu", "memory", "custom/disk", "temperature", "custom/updates", "tray", "custom/clock"],
+    "modules-right": ["tray", "keyboard-state", "pulseaudio", "cpu", "memory", "custom/disk", "temperature", "custom/updates", "custom/clock", "custom/power"],
     // Modules configuration
 
     "sway/workspaces": {
@@ -33,7 +33,7 @@
     "keyboard-state": {
         "numlock": true,
         "capslock": true,
-        "format": "{name} {icon}",
+        "format": "{icon}",
         "format-icons": {
             "locked": "",
             "unlocked": ""
@@ -88,7 +88,7 @@
     "custom/clock": {
         // "timezone": "America/New_York",
         "exec": "~/.local/bin/clock",
-        "on-click": "urxvt -hold -e cal",
+        "on-click": "kitty --hold -e cal",
         "restart-interval": 5,
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
     },
@@ -121,7 +121,7 @@
         "format-icons": "ﮮ",
         "format": "{} {icon}",
         "restart-interval": 300,
-        "on-click": "alacritty -e paru"
+        "on-click": "kitty --hold -e paru"
     },
     "backlight": {
         // "device": "acpi_video1",
@@ -154,6 +154,32 @@
         "format-disconnected": "Disconnected ⚠",
         "format-alt": "{ifname}: {ipaddr}/{cidr}"
     },
+    "custom/notification": {
+      "tooltip": false,
+      "format": "{icon}",
+      "format-icons": {
+        "notification": "<span foreground='red'><sup></sup></span>",
+        "none": " ",
+        "dnd-notification": "<span foreground='red'><sup></sup></span>",
+        "dnd-none": " "
+        },
+      "return-type": "json",
+      "exec-if": "which swaync-client",
+      "exec": "swaync-client -swb",
+      "on-click": "swaync-client -t -sw",
+      "on-click-right": "swaync-client -d -sw",
+      "escape": true
+      },
+    "custom/power": {
+        "tooltip": false,
+        "on-click": "~/.local/bin/powermenu",
+        "format": "襤"
+    },
+    "custom/launcher": {
+        "tooltip": false,
+        "on-click": "(pgrep 'rofi' 1>/dev/null 2>&1 && killall rofi ) || rofi -show drun",
+        "format": "異"
+    },
     "pulseaudio": {
         // "scroll-step": 1, // %, can be a float
         "format": "{volume}% {icon}",
@@ -174,4 +200,3 @@
         "on-click": "pavucontrol"
     }
 }
-

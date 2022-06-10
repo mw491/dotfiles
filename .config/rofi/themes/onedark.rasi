@@ -1,0 +1,8 @@
+/* Onedark Colorscheme */
+* {
+  bg: #282C34;
+  fg: #ABB2BF88;
+  fg-solid: #000000;
+  red: #E06C75;
+  red-alt: #E06C7515;
+}
